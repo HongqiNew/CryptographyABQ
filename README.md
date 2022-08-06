@@ -41,7 +41,7 @@
 > <small>“wvan wxdfy wmd e anyay, rva akqadeanja xl er uaaoay rx tenyejmra rva qxwad xl rva yalanueta xtad rva xllanueta. er wmu weyafc bafeatay rvmr m uiqadexderc en niobadu xl mr famur rvdaa rx xna wmu dagieday lxd m uijjauulif xllanueta. yalanueta jxnjaqru inyadfmc rva jxnurdijrexn xl rva omzenxr fena barwaan ldmnja mny zadomnc mny xl eru fauuad jxinradqmdr, rva ueazldeay fena, en rva enradwmd camdu. car bc 1918 bxrv xl rva dagiedaoanru lxd rva uiqdaomjc xl rva xllanueta wada mr vmny: rmnsu mny qfmnau. rva bmrrfau xl jmobdme (1917) mny moeanu (1918) vmy qdxtay rvmr wvan rmnsu wada iuay en omuuau, werv uidqdeua, mny xn ledo mny xqan raddmen, er wmu qxuuebfa rx bdams rvdxizv mnc rdanjv ucurao. en rva med rva rajvnxfxzc xl wmd vmy mfux jvmnzay dmyejmffc barwaan 1918 mny 1939. oefermdc medjdmlr vmy enjdamuay en ueha, uqaay, mny dmnza, mny lxd xqadmrexnu mr uam, medjdmlr jmddeadu wada yatafxqay rvmr wada jmqmbfa xl mjjxoqmncenz rva lmuraur uidlmja uvequ. moxnz rva naw rcqau xl qfmnau yatafxqay wmu rva yeta bxobad, m qfmna yaueznay lxd mjjidmra fxw-mfreriya bxobenz xl anaoc urdxnz qxenru mu qmdr xl rva rmns-qfmna-enlmnrdc jxobenmrexn. lmur fxw-wenz oxnxqfmna lezvradu wada yatafxqay en mff jxinrdeau; rvaua medjdmlr wada auuanremffc lfcenz qfmrlxdou lxd aezvr rx 12 omjvena zinu enurmffay en rva wenzu. fezvr mny oayeio bxobadu wada mfux yatafxqay rvmr jxify ba iuay lxd rva urdmrazej bxobmdyoanr xl jereau mny oefermdc urdxnzqxenru. rva rvdamr xl bxobad mrrmjsu xn bxrv oefermdc mny jetefemn rmdzaru fay yedajrfc rx rva yatafxqoanr xl dmymd en anzfmny. dmymd omya er qxuuebfa rx yaradoena rva fxjmrexn, rva yeurmnja, mny rva vaezvr mny uqaay xl m yeurmnr medjdmlr nx omrrad wvmr rva wamrvad wmu. bc yajaobad 1938 rvada wada leta dmymd urmrexnu aurmbfeuvay xn rva jxmur xl anzfmny, mny 15 myyerexnmf urmrexnu wada bazin. ux, wvan wmd jmoa en uaqraobad 1939, zdamr bdermen vmy m wmdnenz jvmen xl dmymd urmrexnu rvmr jxify raff wvan vxurefa qfmnau wada mqqdxmjvenz. el uxoaxna raffu cxi rvmr cxi'ta jxoa iq werv m nxtaf eyam xd m nxtaf enradqdarmrexn xl uxoarvenz, er'u qdxbmbfc m jxoqfeoanr: nxr atadcxna eu jmqmbfa xl xdezenmf rvensenz. bir nxr atadcrvenz naw eu raddebfc wxdrvwvefa; m nxtafrc, lxd akmoqfa, eu xlran m jira (xd omcba piur ueffc) ferrfa xbpajr rvmr cxi oezvr qir xn m yeuqfmc uvafl en cxid vxiua.</small>
 
 爱丽丝觉得非常靠谱，该密文不怎么可能被破解，因为密码表总共有 
-$$ 26! $$ 
+![](http://latex.codecogs.com/gif.latex?26!)
 种可能，即使是计算机一一尝试并判断其是否具备可读性十分困难。
 
 > 穷举密钥来尝试获知明文的方法叫做**蛮力破解**或**暴力破解**。无法**蛮力破解**或**暴力破解**的密码是**计算安全**的。
@@ -116,27 +116,32 @@ $$ 26! $$
 
 爱丽丝经过鲍勃提醒发明了一种新的密码。该密码的构想是：**将 a~z 分别看作 0~25。每一位字母换成数字后均加 n 并换回字母。n 就是密钥。**
 
-首先，爱丽丝要解决的问题是：超出怎么办？例如：
-$$
-z+5=30
-$$
-。
+> 这种密码称为**移位密码**。
+
+首先，爱丽丝要解决的问题是：超出怎么办？例如![](http://latex.codecogs.com/png.image?%5Cbg_white%20z+5=30)。
 答案是除以 26，取余数。
 
 几乎所有加密算法都基于有限元素的运算，然而我们熟悉的整数集是无穷的。为了建立起整数集到仅含有限整数的集合的映射，我们定义：
 
->当
->  $$ a,r,m \in \mathbb{Z}, m>0 $$
-> ，
-> $$ a\equiv r\ (mod\ m)$$
-> 代表 a 除以 m 的余数与 r 除以 m 的余数相同。符号
-> $$ \equiv $$
-> 意为同余。一般取满足
-> $$ 0 < r < m $$
-> 的 
-> $$ r $$
-> 。
+>当 ![](http://latex.codecogs.com/png.image?%5Cbg_white%20a,r,m\in\mathbb{Z},m>0)，
+>
+> ![](https://latex.codecogs.com/png.image?%5Cbg_white%20a%20%5Cequiv%20r%5C%20mod%5C%20m) 代表 a 除以 m 的余数与 r 除以 m 的余数相同。符号 ![](http://latex.codecogs.com/png.image?%5Cbg_white%20\equiv) 意为同余。
+> 
+> 一般取满足 ![](http://latex.codecogs.com/png.image?%5Cbg_white%200<r<m) 的 r。这时可以将 r 看作是 a 除以 m 的余数。
+>
+> 模运算满足交换律和分配率。
 
-（未完）
+在移位时，任意给定整数 i 和 r ，我们会发现对同一字母移动 i+26r 位的效果与移动 i 位效果相等。例如，对字母 a=0 移动 1 位和 27 位，结果都等于 b。
+
+> 像 {..., -41, -25, 1, 27, 53, ...} 这样由所有模 26 同余的整数构成了模 26 的**等价类**。
+
+给定任意整数 a 和 r，若 ![](https://latex.codecogs.com/png.image?%5Cbg_white%20a%20%5Cequiv%20r%5C%20mod%5C%20m)，即 a 与 r 在同一模 m 的等价类内，则易证在该式左右两边同时乘以或加上任意两个在同一等价类内的数，左右依然同余。
+
+例如 ![](https://latex.codecogs.com/png.image?%5Cbg_white%201%20%5Cequiv%209%5C%20mod%5C%208)，左边加上 18，右边加上 82，![](https://latex.codecogs.com/png.image?%5Cbg_white%2019%20%5Cequiv%2090%5C%20mod%5C%209) 依然成立。
+
+> 同一等价类中，元素行为等价。
+
+这对于计算来说非常有用。例如爱丽丝想让每个字母移动 200\*200 位，但她又不想一个个数，就可以计算 200\*200 mod 26 的余数。算 40000 mod 26 不是个好主意，我们可以：![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20200*200%20%5Cequiv%20(7*26&plus;18)*(7*26&plus;18)%5Cequiv%2018*18=324=%2012*26&plus;12%5Cequiv%2012%20%5C%20mod%5C%20m)
+
 
 我们使用二进制流进行信息传输，即我们把所有的信息都看作二进制中 0 和 1 的组合。字符串也可以通过 ASCII 或 Unicode 等编码转换为数字。
