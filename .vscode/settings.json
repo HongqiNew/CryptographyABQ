@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "*.ejs": "html",
-        "system_error": "cpp",
-        "ostream": "cpp",
-        "map": "cpp"
-    },
-    "C_Cpp.errorSquiggles": "Disabled"
-}

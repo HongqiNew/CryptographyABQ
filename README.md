@@ -8,7 +8,7 @@
 
 现在，爱丽丝很想在 QQ 上给鲍勃分享自己政治敏感的见解。
  
-![不安全信道]()
+![不安全信道](https://bbvsukzcbmlmapdkuybx.supabase.co/storage/v1/object/public/bed/ink.png)
 
 可是聪明的她随即想到 QQ 可能会读取这条信息，甚至篡改这条信息。
 
@@ -127,7 +127,7 @@
 >
 > ![](https://latex.codecogs.com/png.image?%5Cbg_white%20a%20%5Cequiv%20r%5C%20mod%5C%20m) 代表 a 除以 m 的余数与 r 除以 m 的余数相同。符号 ![](http://latex.codecogs.com/png.image?%5Cbg_white%20\equiv) 意为同余。
 > 
-> 一般取满足 ![](http://latex.codecogs.com/png.image?%5Cbg_white%200<r<m) 的 r。这时可以将 r 看作是 a 除以 m 的余数。
+> 一般取满足 ![](http://latex.codecogs.com/png.image?%5Cbg_white%200\le%20r\le%20m-1) 的 r。这时可以将 r 看作是 a 除以 m 的余数。
 >
 > 模运算满足交换律和分配率。
 
@@ -141,7 +141,73 @@
 
 > 同一等价类中，元素行为等价。
 
-这对于计算来说非常有用。例如爱丽丝想让每个字母移动 200\*200 位，但她又不想一个个数，就可以计算 200\*200 mod 26 的余数。算 40000 mod 26 不是个好主意，我们可以：![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20200*200%20%5Cequiv%20(7*26&plus;18)*(7*26&plus;18)%5Cequiv%2018*18=324=%2012*26&plus;12%5Cequiv%2012%20%5C%20mod%5C%20m)
+这对于计算来说非常有用。例如爱丽丝想让每个字母移动 200\*200 位，但她又不想一个个数，就可以计算 200\*200 mod 26 的余数。算 40000 mod 26 不是个好主意，我们可以：![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20200*200%20%5Cequiv%20(7*26&plus;18)*(7*26&plus;18)%5Cequiv%2018*18=324=%2012*26&plus;12%5Cequiv%2012%20%5C%20mod%5C%2026)
 
+这样极大简化了运算。
 
-我们使用二进制流进行信息传输，即我们把所有的信息都看作二进制中 0 和 1 的组合。字符串也可以通过 ASCII 或 Unicode 等编码转换为数字。
+现在，我们由 ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a%5Cequiv%20a%5C%20mod%5C%20a) 定义一个数的乘法逆元：
+
+> ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a) 的 乘法逆元 ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a^{-1}) 是满足 ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a*a%5E%7B-1%7D=1%5C%20mod%5C%20m)的整数。
+
+接下来证明在整数集（有的情况下称为“整数环”） ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a) 的 乘法逆元 ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a^{-1}) 是否存在与 ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a) 和 ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20m) 是否互素等价。
+
+首先证明 a 与 m 互素是其乘法逆元存在的必要条件：
+
+> 按照定义，![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a) 与 ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a^{-1}) 应等价于 ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a*a%5E%7B-1%7D=%201&plus;mk(k%5Cin%20%5Cmathbb%7BZ%7D))。
+>
+> 这个式子亦等价于 ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a*a%5E%7B-1%7D-mk=%201)。
+> 
+> 假设存在 a 与 m 存在公因数 f，则
+> ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20%5Cfrac%7Ba%7D%7Bf%7D*a%5E%7B-1%7D-%5Cfrac%7Bm%7D%7Bf%7D*k=%20%5Cfrac%7B1%7D%7Bf%7D)。
+> 整数加整数不等于整数，矛盾。证毕。
+
+接下来证明 a 与 m 互素是其乘法逆元存在的充分条件：
+
+> a 与 m 互素。有集合 ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20%5Cleft%5C%7B%200,1,2,...,m-1%20%5Cright%5C%7D) 和序列 ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20%5Cleft(%200*a%5C%20mod%5C%20m,1*a%5C%20mod%5C%20m,2*a%5C%20mod%5C%20m,...,(b-1)*a%5C%20mod%5C%20m%20%5Cright)) 有相同元素个数，且序列中每个元素均属于集合。
+> 
+> 如果该序列与集合等价，则必然存在序列中的一个元素等于 1，即 a 的乘法逆元存在。而只需证明序列元素互不重复，即可证明该序列与集合等价，推出 a 的乘法逆元存在。
+> 
+> 任取两个元素作差得 ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20ka%5C%20mod%5C%20m,k%5Cle%20m-1)。因为 a 是素数，k 亦小于 m，即不可能是 m 的倍数，所以没有相等的两个元素。证毕。
+
+终于可以继续分析密码了。
+
+移位密码很不安全，因为密钥只有 26 种可能。我们介绍一下它的升级版：仿射密码。这是极好的练习模运算的契机。
+
+爱丽丝如果要从移位密码迁移到仿射密码，只需注意在移位前乘以一个数即可。
+
+> 密钥对： (a, b)
+>
+> 加密过程：
+> 
+> ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20y=a*x+b%5C%20mod%5C%2026)
+
+例如密钥对为(2, 1)，明文字母为 c=2，密文字母就为 2*2+1=5=f。
+
+鲍勃如果拿到了密钥对和密文，从直觉上来说，他应该会根据 f=5 计算出 (5-1)/2=2=c。
+
+***错！***
+
+事实上，17 也满足用密钥对(2, 1)加密后值为 5，因为 ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%2015%20*%202%20&plus;1%20%5Cequiv%205%5C%20mod%5C%2026)。这说明密钥对(2, 1)加密得出的密文和明文不是一一映射的关系。
+
+为什么会这样？
+
+**请记住，在模运算中，乘法的逆运算不是除法，而是乘以这个数的乘法逆元。**
+
+我们只需推导一遍解密公式便能发现解决问题的方法：
+
+![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20ax&plus;b%5Cequiv%20y%5C%20mod%5C%2026%5C%5Cax%5Cequiv%20(y-b)%5C%20mod%5C%2026%5C%5Ca*a%5E%7B-1%7Dx%5Cequiv%20a%5E%7B-1%7D%20(y-b)%5C%20mod%5C%2026%5C%5Cx%5Cequiv%20a%5E%7B-1%7D(y-b)%5C%20mod%5C%2026)
+
+注意：求解解密公式的过程中用到了 a 的乘法逆元。前文已经证明过 a 存在乘法逆元的充分必要条件是与 m 互素，否则同时乘以逆元的行为和除以 0 一样没有意义。
+
+因此爱丽丝还需要给密钥对加上一个条件：a 与 26 互素。
+
+现在就没有问题了！我们用密钥对(3, 1)试一下明文 c=3 吧！
+
+![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20y=3*3&plus;1=10%5C%5C3%5E%7B-1%7D=9%5C%5Cx%5Cequiv%209*(10-1)=81%5C%20mod%5C%2026%5C%5Cx=3=c)
+
+令人遗憾的是，这种密码依然并不计算安全或统计学安全，连社会工程的必要都没有，但它的意义在于开了个无限数集映射到有限数集的好头，让我们回顾一下：
+
+- 在密码编码学中，我们使用模运算进行整数集到有限整数集的映射。
+- 模运算中没有实数除法，只有乘以一个数的乘法逆元。在实数运算中，一个数的乘法逆元被称为它的倒数。它们的共同点在于可使得右式为一。之后会学习求解乘法逆元的方法。
+- 移位密码和仿射密码仍然是线性密码，没有随机性，亦无法破坏内部的统计学属性。
+
