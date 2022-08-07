@@ -1,0 +1,38 @@
+<input id='ciphertext' style='border-style: outset; width: 100%;' /><br>
+<textarea id='plaintext' style='border-style: outset; height: 100px; overflow-y: scroll; width: 100%;' readonly></textarea>
+<script>
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    const alphabetSortedByFrequency = 'etaonrishdlfcmugypwbvkjxzq'
+
+   setInterval(() => {
+        const ciphertext = document.getElementById('ciphertext').value
+        let letterAppearCount = new Array(26).fill(0)
+        ciphertext.split('').forEach(letter => {
+            const index = letter.charCodeAt(0) - 97
+            if (index > -1 && index < 26)
+                letterAppearCount[index]++
+        })
+
+        const letterAndCounts = []
+        letterAppearCount.forEach((count, index) => {
+            letterAndCounts.push({
+                letter: alphabet[index],
+                count: count
+            })
+        })
+        letterAndCounts.sort((a, b) => b.count - a.count)
+
+        const plaintext = []
+        ciphertext.split('').forEach(letter => {
+            const ciphertextLetterIndex = letter.charCodeAt(0) - 97
+            if (ciphertextLetterIndex > -1 && ciphertextLetterIndex < 26) {
+                const index = letterAndCounts.indexOf(letterAndCounts.find(letterAndCount => letterAndCount.letter === letter))
+                plaintext.push(alphabetSortedByFrequency[index])
+            }
+            else {
+                plaintext.push(letter)
+            }
+        })
+        document.getElementById('plaintext').innerText = plaintext.join('')
+    }, 1000)
+</script>

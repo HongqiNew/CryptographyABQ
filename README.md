@@ -10,7 +10,7 @@
 
 ## 这里不安全！
 
-现在，爱丽丝很想在 QQ 上给鲍勃分享自己政治敏感的见解。
+现在，爱丽丝很想在 QQ 上给鲍勃分享自己的敏感见解。
  
 ![不安全信道](https://bbvsukzcbmlmapdkuybx.supabase.co/storage/v1/object/public/bed/ink.png)
 
@@ -66,11 +66,51 @@
 
 接下来就是计算出现次数并排序、然后将之与排名相同的字母替换。例如，假如 r 是密文中最多出现的字母，我们可以暂且认为 e 被替换为了 r，并将对应字母代入回原文本看看。
 
-这项工作可以交给计算机做。本文所有的代码都可以在 GitHub 仓库里找到，不过我想键盘政治人没什么读的必要。
+这项工作可以交给计算机做。
 
-但当涉猎，见原理尔。
+> 试试看！
+> <input id='ciphertext' style='border-style: outset; width: 100%;' /><br>
+<textarea id='plaintext' style='border-style: outset; height: 100px; overflow-y: scroll; width: 100%;' readonly></textarea>
+<script>
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    const alphabetSortedByFrequency = 'etaonrishdlfcmugypwbvkjxzq'
 
-计算机算出的密文，我们依然只关注第一句：
+   setInterval(() => {
+        const ciphertext = document.getElementById('ciphertext').value
+        let letterAppearCount = new Array(26).fill(0)
+        ciphertext.split('').forEach(letter => {
+            const index = letter.charCodeAt(0) - 97
+            if (index > -1 && index < 26)
+                letterAppearCount[index]++
+        })
+
+        const letterAndCounts = []
+        letterAppearCount.forEach((count, index) => {
+            letterAndCounts.push({
+                letter: alphabet[index],
+                count: count
+            })
+        })
+        letterAndCounts.sort((a, b) => b.count - a.count)
+
+        const plaintext = []
+        ciphertext.split('').forEach(letter => {
+            const ciphertextLetterIndex = letter.charCodeAt(0) - 97
+            if (ciphertextLetterIndex > -1 && ciphertextLetterIndex < 26) {
+                const index = letterAndCounts.indexOf(letterAndCounts.find(letterAndCount => letterAndCount.letter === letter))
+                plaintext.push(alphabetSortedByFrequency[index])
+            }
+            else {
+                plaintext.push(letter)
+            }
+        })
+        document.getElementById('plaintext').innerText = plaintext.join('')
+    }, 1000)
+</script>
+
+本章节所有的代码都可以在 GitHub 仓库里找到，不过键盘政治人没什么读的必要。但当涉猎，见原理尔。
+
+关注第一句的破译结果：
 
 > gheo grild gai n eoded, the exueineoce rf nt seemed tr vnodncate the urgei rf the defeosnve rvei the rffeosnve.
 
@@ -311,27 +351,27 @@ DES 中的 `F` 函数利用异或与非线性的 `S` 盒进行了混淆和扩散
 
 以上的密码都没能为爱丽丝解决一个很要命的问题：如果她通过不安全信道向鲍勃传送密钥，则 QQ 必然可以看到密钥并用它解密信息。
 
-为了解决这个问题，天才般的爱丽丝想到可以**分别利用无法相互推导的两个密钥分别进行加密和解密**。
+为了解决这个问题，天才般的爱丽丝想到，**可以利用无法相互推导的两个密钥分别进行加密和解密**。
 
 > 利用无法相互推导的两个密钥分别进行加密和解密的算法叫**公钥算法**或**非对称算法**。
 
 > 公开的密钥称为**公钥**，仅自己知道的密钥称为**私钥**。
 
-爱丽丝让鲍勃将鲍勃自己的公钥在发信前通过 QQ 传输给爱丽丝，然后爱丽丝使用该公钥对自己要发送的信息进行加密，并将加密信息通过 QQ 传送给鲍勃。鲍勃用自己的私钥解密用自己的公钥加密而成的密文，计算出明文。
+爱丽丝让鲍勃将鲍勃自己的公钥在发信前通过 QQ 传输给爱丽丝，然后爱丽丝**使用该公钥加密**对自己要发送的信息，并将加密信息通过 QQ 传送给鲍勃。鲍勃**用自己的私钥解密**用自己的公钥加密而成的密文，计算出明文。
 
 在此过程中，QQ 仅能知道鲍勃的公钥和密文，而公钥无法解密自己加密的信息。因此 QQ 无法知道明文！
 
 接着，爱丽丝开始思考如何实现一个公钥算法。她又想到了数论中的一个重要事实：**将两个大素数相乘很容易，从它们巨大的积中重新分解出两个原来的素因子很难**。
 
-> **公钥算法**主要有两种，一种是利用分解大素数的困难性的**RSA 算法**，它仍然是目前世界上最通用的公钥算法；还有一种则基于离散对数。我们主要介绍爱丽丝想实现的的 RSA 算法。
+> **公钥算法**主要有两种，一种是利用分解大素数的困难性的**RSA 算法**，它仍然是目前世界上最通用的公钥算法；还有一种则基于离散对数。我们主要介绍爱丽丝想实现的 RSA 算法。
 
 RSA 算法中，我们需要在给定一个正整数的情况下，计算出小于这个数且与之互素的正整数个数。
 
 > 把给定一个正整数，计算小于这个数且与之互素的正整数个数的函数叫做**欧拉函数**，记作 `φ` 函数。
 
-例如 φ(3)=2，因为共有 1、2 两个数与 3 互质。
+例如 φ(3)=2，因为共有 1、2 两个数与 3 互素。
 
-爱丽丝尝试推导欧拉函数的公式。她首先尝试推导比 ![](https://latex.codecogs.com/svg.image?p%5E%7Bk%7D) 小且与它不互素的数的个数。
+爱丽丝尝试推导欧拉函数的公式。她首先尝试推导比 ![](https://latex.codecogs.com/svg.image?p%5E%7Bk%7D) 小且与它***不***互素的数的个数。
 
 > 显然，比 ![](https://latex.codecogs.com/svg.image?p%5E%7Bk%7D) 小且与它不互素等价于含有因数 ![](https://latex.codecogs.com/svg.image?p)。
 >
@@ -341,21 +381,19 @@ RSA 算法中，我们需要在给定一个正整数的情况下，计算出小�
 >
 > ……
 > 
-> 因此共有 (k-1) 个 p 满足比它小而不互素的条件。可以推出：
+> 因此共有 (k-1)p 个数满足比它小而不互素的条件。可以推出：
 > 
-> ![](https://latex.codecogs.com/svg.image?%5Cvarphi(p%5Ek)=p%5Ek-p%5E%7B(k-1)%7D=p%5Ek(1-%5Cfrac%7B1%7D%7Bp%7D))
+> ![](https://latex.codecogs.com/svg.image?%5Cvarphi(p%5Ek)=p%5Ek-p%5E%7Bk-1%7D=p%5Ek(1-%5Cfrac%7B1%7D%7Bp%7D))
 
 求完了。
 
 接着，爱丽丝试图证明：![](https://latex.codecogs.com/svg.image?%5Cvarphi(mn)=%5Cvarphi(m)%5Cvarphi(n))。
 
-大致思路：
-
 > 构建两个集合：第一个集合中的正整数 ![](https://latex.codecogs.com/svg.image?a_%7Bi%7D) 小于 mn 且与 mn 互素，第二个集合中的二元组 ![](https://latex.codecogs.com/svg.image?(b_%7Bi%7D,c_%7Bi%7D)) 满足 ![](https://latex.codecogs.com/svg.image?b_%7Bi%7D) 小于 m 且与 m 互素、![](https://latex.codecogs.com/svg.image?c_%7Bi%7D) 小于 n 且与 n 互素。
 > 
-> 可推出 a 与 m 和 n 都互素。替换为等价类中的其它数后可产生二元组 (a mod m, a mod n)，该二元组属于第二个集合。易证这样的对应关系 A 到 B 满足单射，通过中国剩余定理又可证 A 到 B 满足满射。
+> 可推出 a 与 m 和 n 都互素。将 a 替换为等价类中的其它数后可产生二元组 (a mod m, a mod n)，该二元组属于集合 B。易证这样的对应关系 A 到 B 是单射，即每个 A 中的元素对应一个不重复的 B 中的元素；通过中国剩余定理又可证 A 到 B 是满射，即每个 B 中的元素都有 A 中的元素与之对应。
 > 
-> 因此两个集合的元素个数相同。
+> 故 A 集合到 B 集合是双射，即一一对应。因此两个集合的元素个数相同。
 
 最终，爱丽丝推出了欧拉函数的公式：
 
@@ -369,23 +407,37 @@ RSA 算法中，我们需要在给定一个正整数的情况下，计算出小�
 
 > 1. 选择*非常大*的素数 p 和 q。
 > 2. 计算 n=pq。
-> 3. 计算 φ(n)=(p-1)(q-1)（这种形式不过是我们刚刚求出的公式进行乘法分配律，并代入 φ(p)=p-1 和 φ(q)=q-1）。
+> 3. 计算 φ(n)=(p-1)(q-1)［这种形式不过是我们刚刚求出的公式进行乘法分配律，并代入 φ(p)=p-1 和 φ(q)=q-1］。
 > 4. 选择小于 φ(n) 且与 φ(n) 互质的正整数 e。
 > 5. 计算模 φ(n) 意义下 e 的逆元 d。
-> 6. 记录 (n, e) 作为公钥，(n, d) 作为私钥并销毁计算过程中产生的数据。
+> 6. 记录 (n, e) 作为公钥，(n, d) 作为私钥，并销毁计算过程中产生的数据。
 
 注意，非对称算法（公钥算法）中的密钥通常需要比对称算法的密钥长得多。
 
-`d` 暴露是一件非常危险的事，知道 `d` 的任何人都可以读取密文。
+`d` 暴露是一件非常危险的事，知道 `d` 的任何人只要联立公开的 `n` 就都可以读取密文。
 
 现在，爱丽丝要使用 RAS 算法发信息给鲍勃。
 
 > 计算公钥和私钥，收信方鲍勃给发信方爱丽丝提供自己的公钥。
 > 
-> 爱丽丝拿到鲍勃的公钥 (n, e)，用它加密明文 x 得到密文 ![](https://latex.codecogs.com/svg.image?y%5Cequiv%20x%5Ee%5C%20mod%5C%20n)。
+> 爱丽丝拿到鲍勃的公钥 (n, e)，用它加密明文 x (x<n) 得到密文 ![](https://latex.codecogs.com/svg.image?y%5Cequiv%20x%5Ee%5C%20mod%5C%20n)。
 > 
-> 可恶的 QQ 发现了爱丽丝传输的密文 y 和公钥 (n, e)，试图计算私钥 d 来读取消息。计算 d，即计算出模 φ(n) 意义下 e 的逆元，就需要计算出 φ(n)=(p-1)(q-1)。可是对大素数分解素因数及其困难，所以 QQ 几乎没有不被正义打败的可能。
+> 可恶的 QQ 发现了爱丽丝传输的密文 y 和公钥 (n, e)，试图计算私钥 d 来读取消息。计算 d，即计算出模 φ(n) 意义下 e 的逆元，就需要计算出 φ(n)=(p-1)(q-1)。可是对大素数分解素因数极其困难，所以 QQ 几乎没有在有生之年算出来的可能。
 > 
 > 鲍勃接受到密文 x，用自己的私钥 (n, d) 计算出明文 ![](https://latex.codecogs.com/svg.image?x%5Cequiv%20y%5Ed%5C%20mod%5C%20n)。
 
-证明它为什么能够成立，需要把 y 代换，得到证明它为什么能够成立，即证明 ![](https://latex.codecogs.com/svg.image?x%5Cequiv%20x%5E%7Bde%7D%5C%20mod%5C%20n)。
+举例：
+
+> ![RSA 1](https://bbvsukzcbmlmapdkuybx.supabase.co/storage/v1/object/public/bed/0.8392475090672491.png)
+> 
+> ![RSA 2](https://bbvsukzcbmlmapdkuybx.supabase.co/storage/v1/object/public/bed/0.8629663057702643.png)
+> 
+> ![RSA 3](https://bbvsukzcbmlmapdkuybx.supabase.co/storage/v1/object/public/bed/0.3659689833940627.png)
+
+证明它为什么能够成立，需要把 y 代换，得到：证明它能够成立，等价于证明 ![](https://latex.codecogs.com/svg.image?x%5Cequiv%20x%5E%7Bde%7D%5C%20mod%5C%20n)。
+
+事实证明，这个式子是成立的。因为严格证明的步骤比较繁琐，所以爱丽丝决定，如果研究完还有精力的话，就课下再读一读[维基百科上的证明](https://zh.wikipedia.org/wiki/RSA%E5%8A%A0%E5%AF%86%E6%BC%94%E7%AE%97%E6%B3%95#%E6%AD%A3%E7%A1%AE%E6%80%A7%E8%AF%81%E6%98%8E)。没精力的话，不读也无妨，因为爱丽丝已经了解了 RSA 加密的大致过程和原理与安全性和正确性。让我们来小结一下 RSA 算法：
+
+- RSA 算法是公钥算法，它对比对称算法解决了密钥传递的大问题。
+- RSA 算法基于分解大素数极为困难的事实，足够安全的公钥和私钥长度一般远大于对称算法。
+- 密码学学者试图寻找高效的算法实现大素数的寻找和大数的乘方，但 RSA 算法的性能仍远低于对称算法。互联网通信协议（例如 `HTTPS`）中，一般混合多种加密算法。

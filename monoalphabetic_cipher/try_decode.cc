@@ -29,20 +29,20 @@ int main()
     }
 
     // 带着对应字母按频率降序排列
-    map<string, size_t> letter_count_map[ALPHABET_LENGTH] = {};
+    map<string, size_t> letter_count_maps[ALPHABET_LENGTH] = {};
     for (size_t i = 0; i < ALPHABET_LENGTH; i++)
     {
-        letter_count_map[i]["letter"] = alphabet[i];
-        letter_count_map[i]["count"] = letter_appear_count[i];
+        letter_count_maps[i]["letter"] = alphabet[i];
+        letter_count_maps[i]["count"] = letter_appear_count[i];
     }
-    sort(letter_count_map, letter_count_map + ALPHABET_LENGTH, sort_frequency);
+    sort(letter_count_maps, letter_count_maps + ALPHABET_LENGTH, sort_frequency);
 
     // 替换
     for (size_t i1 = 0; i1 < ciphertext.length(); i1++)
     {
         for (size_t i2 = 0; i2 < ALPHABET_LENGTH; i2++)
         {
-            if (ciphertext[i1] == letter_count_map[i2].at("letter"))
+            if (ciphertext[i1] == letter_count_maps[i2].at("letter"))
             {
                 ciphertext[i1] = alphabet_sorted_by_frequency[i2];
                 break;
