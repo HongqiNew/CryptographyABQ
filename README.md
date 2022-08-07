@@ -40,9 +40,7 @@
 
 > <small>“wvan wxdfy wmd e anyay, rva akqadeanja xl er uaaoay rx tenyejmra rva qxwad xl rva yalanueta xtad rva xllanueta. er wmu weyafc bafeatay rvmr m uiqadexderc en niobadu xl mr famur rvdaa rx xna wmu dagieday lxd m uijjauulif xllanueta. yalanueta jxnjaqru inyadfmc rva jxnurdijrexn xl rva omzenxr fena barwaan ldmnja mny zadomnc mny xl eru fauuad jxinradqmdr, rva ueazldeay fena, en rva enradwmd camdu. car bc 1918 bxrv xl rva dagiedaoanru lxd rva uiqdaomjc xl rva xllanueta wada mr vmny: rmnsu mny qfmnau. rva bmrrfau xl jmobdme (1917) mny moeanu (1918) vmy qdxtay rvmr wvan rmnsu wada iuay en omuuau, werv uidqdeua, mny xn ledo mny xqan raddmen, er wmu qxuuebfa rx bdams rvdxizv mnc rdanjv ucurao. en rva med rva rajvnxfxzc xl wmd vmy mfux jvmnzay dmyejmffc barwaan 1918 mny 1939. oefermdc medjdmlr vmy enjdamuay en ueha, uqaay, mny dmnza, mny lxd xqadmrexnu mr uam, medjdmlr jmddeadu wada yatafxqay rvmr wada jmqmbfa xl mjjxoqmncenz rva lmuraur uidlmja uvequ. moxnz rva naw rcqau xl qfmnau yatafxqay wmu rva yeta bxobad, m qfmna yaueznay lxd mjjidmra fxw-mfreriya bxobenz xl anaoc urdxnz qxenru mu qmdr xl rva rmns-qfmna-enlmnrdc jxobenmrexn. lmur fxw-wenz oxnxqfmna lezvradu wada yatafxqay en mff jxinrdeau; rvaua medjdmlr wada auuanremffc lfcenz qfmrlxdou lxd aezvr rx 12 omjvena zinu enurmffay en rva wenzu. fezvr mny oayeio bxobadu wada mfux yatafxqay rvmr jxify ba iuay lxd rva urdmrazej bxobmdyoanr xl jereau mny oefermdc urdxnzqxenru. rva rvdamr xl bxobad mrrmjsu xn bxrv oefermdc mny jetefemn rmdzaru fay yedajrfc rx rva yatafxqoanr xl dmymd en anzfmny. dmymd omya er qxuuebfa rx yaradoena rva fxjmrexn, rva yeurmnja, mny rva vaezvr mny uqaay xl m yeurmnr medjdmlr nx omrrad wvmr rva wamrvad wmu. bc yajaobad 1938 rvada wada leta dmymd urmrexnu aurmbfeuvay xn rva jxmur xl anzfmny, mny 15 myyerexnmf urmrexnu wada bazin. ux, wvan wmd jmoa en uaqraobad 1939, zdamr bdermen vmy m wmdnenz jvmen xl dmymd urmrexnu rvmr jxify raff wvan vxurefa qfmnau wada mqqdxmjvenz. el uxoaxna raffu cxi rvmr cxi'ta jxoa iq werv m nxtaf eyam xd m nxtaf enradqdarmrexn xl uxoarvenz, er'u qdxbmbfc m jxoqfeoanr: nxr atadcxna eu jmqmbfa xl xdezenmf rvensenz. bir nxr atadcrvenz naw eu raddebfc wxdrvwvefa; m nxtafrc, lxd akmoqfa, eu xlran m jira (xd omcba piur ueffc) ferrfa xbpajr rvmr cxi oezvr qir xn m yeuqfmc uvafl en cxid vxiua.</small>
 
-爱丽丝觉得非常靠谱，该密文不怎么可能被破解，因为密码表总共有 
-![](http://latex.codecogs.com/gif.latex?26!)
-种可能，即使是计算机一一尝试并判断其是否具备可读性十分困难。
+爱丽丝觉得非常靠谱，该密文不怎么可能被破解，因为密码表总共有 ![](http://latex.codecogs.com/svg.latex?26!) 种可能，即使是计算机一一尝试并判断其是否具备可读性十分困难。
 
 > 穷举密钥来尝试获知明文的方法叫做**蛮力破解**或**暴力破解**。无法**蛮力破解**或**暴力破解**的密码是**计算安全**的。
 
@@ -50,11 +48,11 @@
 
 鲍勃当然不可能蛮力破解。他注意到了一些在替换后文本没有更改的属性——各字母的统计学属性。
 
-替换法不是好的加密方法，因为字母是一一对应的，加密对一个字母的影响没有“扩散”，使得各字母出现的频率未改变。鲍勃想到按照各字母在这段密文中出现的次数排序，根据各字母在实际英语文本中的出现频率的顺序确定字母间的对应关系。
+替换法不是好的加密方法，因为字母是一一对应的，使得各字母出现的频率未改变。鲍勃想到按照各字母在这段密文中出现的次数排序，根据各字母在实际英语文本中的出现频率的顺序确定字母间的对应关系。
 
 鲍勃不仅可以根据单个字母出现的频率来确定对应关系，还可以根据字母组合出现的频率确定。例如，`qu` 是经常一起出现的字母组合。通过确定一些短单词的拼写也非常有用。
 
-这些方法暴露出替换加密的另一个问题：我们只需要知道二十六对互不重复明文字母和密文字母就可以知道完整的密钥。
+这些方法暴露出替换加密的另一个问题：我们只需要知道二十六对互不重复的明文字母和密文字母就可以知道完整的密钥。
 
 是时候开始破译了！
 
@@ -74,7 +72,7 @@
 
 看起来挺令人失望的，对吧？依然看起来毫无头绪。这是因为文本长度不够，且文本主题过于单一，所以一些词出现频率很高，以至于字母频率偏离平均值。但是已经有一些单词有模有样了！
 
-事实上，我们只要思考一下就可以发现一些蛛丝马迹。例如反复出现的 `rf` 和 `nt`，显然是 `of` 和 `it`。我们又知道了两对映射：
+事实上，我们只要思考一下就可以发现一些蛛丝马迹。例如反复出现的 `rf` 和 `nt`，显然是 `of` 和 `it`。我们又知道了两对：
 
 - r -> o
 - n -> i
@@ -98,7 +96,7 @@
 
 > when world war i ended, the experience of it seemed to vindicate the power of the defensive over the offensive.
 
-我们还有那么多段怎么办？别担心，我们只需要二十六个互不重复的明文和密文的字母对就可以求出完整的密码表了，事实上我们已经求出了十八个以上，再来几句就几乎可以求出整张密码表。
+我们还有那么多段怎么办？别担心，我们只需要二十六对互不重复的明文和密文的字母就可以求出完整的密码表了，事实上我们已经求出了差不多二十对，再来几句就几乎可以求出整张密码表。
 
 只要鲍勃有耐心花十分钟读几句话再敲几行代码，密码表就破译了，于是可以用密码表作为密钥对密文进行解码。
 
@@ -110,7 +108,9 @@
 
 最后，尤其值得一提的是另一种破译密文的方式：将已经破译密文的鲍勃带回派出所。
 
-> 这种方式在密码学中称为**社会工程**。
+> 这种方式在现代密码学中称为**社会工程**。
+
+破译密码就是要找到最薄弱的一环，而非密码本身最薄弱的一环。往后运用密码编码学时，我们要尤为注意。
 
 ## 移动一点
 
@@ -118,16 +118,16 @@
 
 > 这种密码称为**移位密码**。
 
-首先，爱丽丝要解决的问题是：超出怎么办？例如![](http://latex.codecogs.com/png.image?%5Cbg_white%20z+5=30)。
+首先，爱丽丝要解决的问题是：超出怎么办？例如 ![](https://latex.codecogs.com/svg.image?z&plus;5=30)。
 答案是除以 26，取余数。
 
 几乎所有加密算法都基于有限元素的运算，然而我们熟悉的整数集是无穷的。为了建立起整数集到仅含有限整数的集合的映射，我们定义：
 
->当 ![](http://latex.codecogs.com/png.image?%5Cbg_white%20a,r,m\in\mathbb{Z},m>0)，
+>当 ![](https://latex.codecogs.com/svg.image?a,r,m%5Cin%5Cmathbb%7BZ%7D,m%3E0)，
 >
-> ![](https://latex.codecogs.com/png.image?%5Cbg_white%20a%20%5Cequiv%20r%5C%20mod%5C%20m) 代表 a 除以 m 的余数与 r 除以 m 的余数相同。符号 ![](http://latex.codecogs.com/png.image?%5Cbg_white%20\equiv) 意为同余。
+> ![](https://latex.codecogs.com/svg.image?%5Cbg_white%20a%20%5Cequiv%20r%5C%20mod%5C%20m) 代表 a 除以 m 的余数与 r 除以 m 的余数相同。符号 ![](https://latex.codecogs.com/svg.image?%5Cequiv) 意为同余。
 > 
-> 一般取满足 ![](http://latex.codecogs.com/png.image?%5Cbg_white%200\le%20r\le%20m-1) 的 r。这时可以将 r 看作是 a 除以 m 的余数。
+> 一般取满足 ![](https://latex.codecogs.com/svg.image?%5Cequiv0%5Cle%20r%5Cle%20m-1) 的 r。这时可以将 r 看作是 a 除以 m 的余数。
 >
 > 模运算满足交换律和分配律。
 
@@ -135,39 +135,40 @@
 
 > 像 {..., -41, -25, 1, 27, 53, ...} 这样由所有模 26 同余的整数构成了模 26 的**等价类**。
 
-给定任意整数 a 和 r，若 ![](https://latex.codecogs.com/png.image?%5Cbg_white%20a%20%5Cequiv%20r%5C%20mod%5C%20m)，即 a 与 r 在同一模 m 的等价类内，则易证在该式左右两边同时乘以或加上任意两个在同一等价类内的数，左右依然同余。
+给定任意整数 a 和 r，若 ![](https://latex.codecogs.com/svg.image?%5Cbg_white%20a%20%5Cequiv%20r%5C%20mod%5C%20m)，即 a 与 r 在同一模 m 的等价类内，则易证在该式左右两边同时乘以或加上任意两个在同一等价类内的数，左右依然同余。
 
-例如 ![](https://latex.codecogs.com/png.image?%5Cbg_white%201%20%5Cequiv%209%5C%20mod%5C%208)，左边加上 18，右边加上 82，![](https://latex.codecogs.com/png.image?%5Cbg_white%2019%20%5Cequiv%2090%5C%20mod%5C%209) 依然成立。
+例如 ![](https://latex.codecogs.com/svg.image?%5Cbg_white%201%20%5Cequiv%209%5C%20mod%5C%208)，左边加上 18，右边加上 82，![](https://latex.codecogs.com/svg.image?%5Cbg_white%2019%20%5Cequiv%2090%5C%20mod%5C%209) 依然成立。
 
 > 同一等价类中，元素行为等价。
 
-这对于计算来说非常有用。例如爱丽丝想让每个字母移动 200\*200 位，但她又不想一个个数，就可以计算 200\*200 mod 26 的余数。算 40000 mod 26 不是个好主意，我们可以：![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20200*200%20%5Cequiv%20(7*26&plus;18)*(7*26&plus;18)%5Cequiv%2018*18=324=%2012*26&plus;12%5Cequiv%2012%20%5C%20mod%5C%2026)
+这对于计算来说非常有用。例如爱丽丝想让每个字母移动 200\*200 位，但她又不想一个个数，就可以计算 200\*200 mod 26 的余数。算 40000 mod 26 不是个好主意，我们可以：![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20200*200%20%5Cequiv%20(7*26&plus;18)*(7*26&plus;18)%5Cequiv%2018*18=324=%2012*26&plus;12%5Cequiv%2012%20%5C%20mod%5C%2026)
 
 这样极大简化了运算。
 
-现在，我们由 ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a%5Cequiv%20a%5C%20mod%5C%20a) 定义一个数的乘法逆元：
+现在，我们由 ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a%5Cequiv%20a%5C%20mod%5C%20m) 定义一个数的乘法逆元：
 
-> ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a) 的 乘法逆元 ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a^{-1}) 是满足 ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a*a%5E%7B-1%7D=1%5C%20mod%5C%20m)的整数。
+> ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a) 的乘法逆元 ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a^{-1}) 是满足 ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a*a%5E%7B-1%7D=1%5C%20mod%5C%20m) 的整数。
 
-接下来证明在整数集（有的情况下称为“整数环”） ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a) 的 乘法逆元 ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a^{-1}) 是否存在与 ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a) 和 ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20m) 是否互素等价。
+接下来证明在整数集（有的情况下称为“整数环”） ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a) 的 乘法逆元 ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a^{-1}) 存在与 ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a) 和 ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20m) 互素等价。
 
 首先证明 a 与 m 互素是其乘法逆元存在的必要条件：
 
-> 按照定义，![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a) 与 ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a^{-1}) 应等价于 ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a*a%5E%7B-1%7D=%201&plus;mk(k%5Cin%20%5Cmathbb%7BZ%7D))。
+> 按照定义，![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a) 与 ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a^{-1}) 应等价于 ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a*a%5E%7B-1%7D=%201&plus;mk(k%5Cin%20%5Cmathbb%7BZ%7D))。
 >
-> 这个式子亦等价于 ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a*a%5E%7B-1%7D-mk=%201)。
+> 这个式子亦等价于 ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a*a%5E%7B-1%7D-mk=%201)。
 > 
-> 假设存在 a 与 m 存在公因数 f，则
-> ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20%5Cfrac%7Ba%7D%7Bf%7D*a%5E%7B-1%7D-%5Cfrac%7Bm%7D%7Bf%7D*k=%20%5Cfrac%7B1%7D%7Bf%7D)。
+> 假设存在 a 与 m 存在公因数 f，则 ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20%5Cfrac%7Ba%7D%7Bf%7D*a%5E%7B-1%7D-%5Cfrac%7Bm%7D%7Bf%7D*k=%20%5Cfrac%7B1%7D%7Bf%7D)。
+>
 > 整数加整数等于分数，矛盾。证毕。
+
 
 接下来证明 a 与 m 互素是其乘法逆元存在的充分条件：
 
-> a 与 m 互素。有集合 ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20%5Cleft%5C%7B%200,1,2,...,m-1%20%5Cright%5C%7D) 和序列 ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20%5Cleft(%200*a%5C%20mod%5C%20m,1*a%5C%20mod%5C%20m,2*a%5C%20mod%5C%20m,...,(b-1)*a%5C%20mod%5C%20m%20%5Cright)) 有相同元素个数，且序列中每个元素均属于集合。
+> a 与 m 互素。有集合 ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20%5Cleft%5C%7B%200,1,2,...,m-1%20%5Cright%5C%7D) 和序列 ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20%5Cleft(%200*a%5C%20mod%5C%20m,1*a%5C%20mod%5C%20m,2*a%5C%20mod%5C%20m,...,(b-1)*a%5C%20mod%5C%20m%20%5Cright)) 有相同元素个数，且序列中每个元素均属于集合。
 > 
-> 如果该序列与集合等价，则必然存在序列中的一个元素等于 1，即 a 的乘法逆元存在。而只需证明序列元素互不重复，即可证明该序列与集合等价，推出 a 的乘法逆元存在。
+> 如果该序列与集合等价，则必然存在序列中的一个元素等于 1，即 a 的乘法逆元存在。而只需证明序列元素互不重复，即可证明该序列可以构成集合且与该集合等价，推出 a 的乘法逆元存在。
 > 
-> 任取两个元素作差得 ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20ka%5C%20mod%5C%20m,k%5Cle%20m-1)。因为 a 是素数，k 亦小于 m，即不可能是 m 的倍数，所以没有相等的两个元素。证毕。
+> 任取两个元素作差得 ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20ka%5C%20mod%5C%20m,k%5Cle%20m-1)。因为 a 与 m 互素，k 亦小于 m，即 k 不可能是 m 的倍数，所以没有两个元素差为 0。证毕。
 
 终于可以继续分析密码了。
 
@@ -179,7 +180,7 @@
 >
 > 加密过程：
 > 
-> ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20y=a*x+b%5C%20mod%5C%2026)
+> ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20y=a*x+b%5C%20mod%5C%2026)
 
 例如密钥对为(2, 1)，明文字母为 c=2，密文字母就为 2*2+1=5=f。
 
@@ -187,15 +188,15 @@
 
 ***错！***
 
-事实上，17 也满足用密钥对(2, 1)加密后值为 5，因为 ![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%2015%20*%202%20&plus;1%20%5Cequiv%205%5C%20mod%5C%2026)。这说明密钥对(2, 1)加密得出的密文和明文不是一一映射的关系。
+事实上，17 也满足用密钥对(2, 1)加密后值为 5，因为 ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%2015%20*%202%20&plus;1%20%5Cequiv%205%5C%20mod%5C%2026)。这说明密钥对(2, 1)加密得出的密文和明文不是一一映射的关系，无法根据密文和密钥得出唯一确定的明文。
 
-为什么会这样？
+出 bug 了！为什么会这样？
 
 **请记住，在模运算中，乘法的逆运算不是除法，而是乘以这个数的乘法逆元。**
 
 我们只需推导一遍解密公式便能发现解决问题的方法：
 
-![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20ax&plus;b%5Cequiv%20y%5C%20mod%5C%2026%5C%5Cax%5Cequiv%20(y-b)%5C%20mod%5C%2026%5C%5Ca*a%5E%7B-1%7Dx%5Cequiv%20a%5E%7B-1%7D%20(y-b)%5C%20mod%5C%2026%5C%5Cx%5Cequiv%20a%5E%7B-1%7D(y-b)%5C%20mod%5C%2026)
+![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20ax&plus;b%5Cequiv%20y%5C%20mod%5C%2026%5C%5Cax%5Cequiv%20(y-b)%5C%20mod%5C%2026%5C%5Ca*a%5E%7B-1%7Dx%5Cequiv%20a%5E%7B-1%7D%20(y-b)%5C%20mod%5C%2026%5C%5Cx%5Cequiv%20a%5E%7B-1%7D(y-b)%5C%20mod%5C%2026)
 
 注意：求解解密公式的过程中用到了 a 的乘法逆元。前文已经证明过 a 存在乘法逆元的充分必要条件是与 m 互素，否则同时乘以逆元的行为就和除以 0 一样没有意义。
 
@@ -203,12 +204,90 @@
 
 现在就没有问题了！我们用密钥对(3, 1)试一下明文 c=3 吧！
 
-![](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%20%5Cbg_white%20y=3*3&plus;1=10%5C%5C3%5E%7B-1%7D=9%5C%5Cx%5Cequiv%209*(10-1)=81%5C%20mod%5C%2026%5C%5Cx=3=c)
+![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20y=3*3&plus;1=10%5C%5C3%5E%7B-1%7D=9%5C%5Cx%5Cequiv%209*(10-1)=81%5C%20mod%5C%2026%5C%5Cx=3=c)
 
-令人遗憾的是，这种密码依然并不计算安全或统计学安全，连社会工程的必要都没有，但它的意义在于开了个无限数集映射到有限数集的好头，让我们回顾一下：
+令人遗憾的是，这种密码依然并不满足计算安全或统计学安全，连社会工程的必要都没有，但它的意义在于开了个无限数集映射到有限数集的好头，让我们回顾一下：
 
 - 在密码编码学中，我们使用模运算进行整数集到有限整数集的映射。
 - 模运算中没有实数除法，只有乘以一个数的乘法逆元。在实数运算中，一个数的乘法逆元被称为它的倒数。它们的共同点在于可使得右式为一。之后会学习求解乘法逆元的方法。
 - 移位密码和仿射密码仍然是线性密码，没有随机性，亦无法破坏内部的统计学属性。
 
-（未完）
+## 异或——二元切换
+
+爱丽丝又想到，由于数据能够以二进制流的形式传输（字符串可以先转 ASCII 码或其它编码再转二进制），也就是说非 0 即 1，可以随机产生一个与二进制下的明文信息等长的二进制串，并将位置相同的明文与密钥位相加并模 2，对所有位都执行此操作。
+
+例如，对于明文 110，爱丽丝随机写下密钥 101，则密文为 011。因为：
+
+![](https://latex.codecogs.com/svg.image?1&plus;1=2%5Cequiv%200%5C%20mod%5C%202%5C%5C1&plus;0=1%5Cequiv%201%5C%20mod%5C%202%5C%5C0&plus;1=1%5Cequiv%201%5C%20mod%5C%202%5C%5C)
+
+> 对于这种单独加密每一位的密码称为**序列密码**。
+
+模 2 除法的解密方法亦显而易见，就是每位都减去密钥位。不过我们只想在自然数集内运算，因此爱丽丝可以给每位都加上密钥位。
+
+加密和解密的过程总共加上了两次密钥位，可以推出 ![](https://latex.codecogs.com/svg.image?s_%7Bi%7D&plus;2k_%7Bi%7D%5Cequiv%20s_%7Bi%7D%5C%20mod%5C%202)。
+
+模 2 加法等价于“异或”。
+
+> **异或（XOR）** 的法则是，假如两个二进制位不相等，则结果为 1；否则结果为 0。
+
+一种直观的实现方法：
+
+```cpp
+bool xor (bool a, bool b) { // C++ Function
+    return a!=b;
+}
+
+/*
+ * xor(0, 0) == 0
+ * xor(0, 1) == 1
+ * xor(1, 0) == 1
+ * xor(1, 1) == 0
+ */
+```
+
+假设与 1 进行异或，对于信息 0，不停地以结果作为下一次运算的初始值：
+
+| 初值 | 0 | 1 | 0 | 1 |
+|----------|---|---|---|---|
+| 结果     | 1 | 0 | 1 | 0 |
+
+可以发现，结果永远在 0 和 1 之间来回切换，且进行任意次的异或，结果为 0 的概率和为 1 的概率相等。模 2 加法的效果与之完全一样。
+
+对于明文 110，爱丽丝随机写下密钥 101，则密文为 011。因为 1=1，故第一位异或值为 0；1≠0，故第二、三位异或值为 1。再次印证了模 2 加法的效果与之完全一样。
+
+鲍勃需要解密，用密文 011 再与密钥 101 按位异或即可得出明文 110。
+
+可是一般来说，信息都很长很长。我们需要自动生成随机密钥的方法。
+
+有三种重要的随机数生成器：
+
+- **真随机数生成器**，例如抛五十次硬币。鉴于抛硬币比较~~低级~~麻烦，可以采用记录半导体噪音或元素放射性衰变的高效方法。~~（世界上有真随机吗？）~~
+- **（不满足密码学安全的）伪随机数生成器**，由一个初始的种子进行运算得到伪随机序列。一个最常见的例子是**线性同余生成器**：![](https://latex.codecogs.com/svg.image?s_%7Bi&plus;1%7D%20%5Cequiv%20as_%7Bi%7D&plus;b%5C%20mod%5C%20m)。ANSI C 标准中采用的参数为 ![](https://latex.codecogs.com/svg.image?a=1103515245,b=12345,m=2%5E%7B31%7D)。可惜的是，尽管它具有良好的统计学属性，但在获知一定长度的随机数序列的条件下是可以计算出种子并进行预测的。ANSI C 标准的随机数生成算法和 V8 (JavaScript) 的随机数生成算法都不具有不可预知性。不过这不那么重要。
+- **密码学安全的伪随机数生成器**难以通过一定长度的随机数序列计算出后续位。在一些场景中，这是必要的。
+
+我们可以根据所需安全程度的不同，利用以上任意一种随机数生成器。
+
+至此，我们终于实现了序列密码。
+
+它的缺点在于，需要和明文同样长的密钥，密钥的传递也是个问题。不过序列密码因其只有异或操作，故电路可以非常高效地执行，在资源有限的设备上具有优势。
+
+有一种密码与序列密码相对：
+
+> **分组密码**每次使用相同密钥加密整个明文位分组。
+
+分组密码的实现有 DES、3DES 等等。按组来加密，可以混淆密钥和密文的关系，同时可以通过将一个明文符号的影响扩散到多个密文符号来隐藏其统计属性。
+
+N 轮乘积密码就是分组密码，它交替进行 N 轮数据的扩散和混淆。改变 1 位都会对密文造成巨大的改变。
+
+分组密码的主要结构是 Feistel 网络，每次只对左半组进行加密并加密完成后调换顺序：
+
+![](https://i.stack.imgur.com/IGGiW.gif)
+
+解密过程和加密过程非常类似，而且只需要将加密密钥顺序反转即是解密密钥。
+
+爱丽丝了解了分组密码的大致原理，她并不想了解一些具体实现，因此回顾一下序列密码与分组密码吧：
+
+- 异或操作和随机数在现代密码学中有非常重要的运用。
+- 序列密码用一位密钥加密一位明文，分组密码用同一密钥加密不同分组。
+- 在高度机密场合，使用真随机数，甚至可以“一次一密”（例如冷战期间的各国政府通信）。其它情况下，可根据场景不同选择是否使用密码学安全的随机数生成器。
+- 序列密码一般比分组密码所需资源少。
