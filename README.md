@@ -1,8 +1,12 @@
-> 这篇文章是给从未接触过密码学原理或对于密码学基础原理十分好奇的读者准备的，如果您已经具备一定基础或只想知道如何运用，可以直接阅读左翼网络社的系列教程。
+> 这篇文章是给**从未接触过密码学原理**或**对于密码学基础原理十分好奇**的读者准备的，如果您已经具备一定基础或只想知道如何运用，可以直接阅读左翼网络社的系列教程。
 > 
-> 为了防止您疲劳或中途按捺不住键政的欲望，本文不得不十分有趣并浅尝辄止，因此无需担心。
+> 您的对密码学原理的理解会随跟着左翼网络社的系列教程进行**应用**而加深。
 > 
-> 尽管本文会运用许多数学原理，但只需要完成九年义务教育水准的数学基础即可大概读懂。
+> 为了防止您疲劳或中途按捺不住键政的欲望，本文不得不十分有趣并**浅尝辄止**，因此无需担心。
+> 
+> 尽管本文会运用许多数学原理，但**只需要完成九年义务教育水准的数学基础**即可大概读懂。
+>
+> **请关闭黑暗模式。** 不建议您独自深夜在被窝里钻研数学，更好地方法是明天早起研究。
 
 ## 这里不安全！
 
@@ -39,8 +43,9 @@
 爱丽丝非常自信地在交给鲍勃密码表后发送了如下密文：
 
 > <small>“wvan wxdfy wmd e anyay, rva akqadeanja xl er uaaoay rx tenyejmra rva qxwad xl rva yalanueta xtad rva xllanueta. er wmu weyafc bafeatay rvmr m uiqadexderc en niobadu xl mr famur rvdaa rx xna wmu dagieday lxd m uijjauulif xllanueta. yalanueta jxnjaqru inyadfmc rva jxnurdijrexn xl rva omzenxr fena barwaan ldmnja mny zadomnc mny xl eru fauuad jxinradqmdr, rva ueazldeay fena, en rva enradwmd camdu. car bc 1918 bxrv xl rva dagiedaoanru lxd rva uiqdaomjc xl rva xllanueta wada mr vmny: rmnsu mny qfmnau. rva bmrrfau xl jmobdme (1917) mny moeanu (1918) vmy qdxtay rvmr wvan rmnsu wada iuay en omuuau, werv uidqdeua, mny xn ledo mny xqan raddmen, er wmu qxuuebfa rx bdams rvdxizv mnc rdanjv ucurao. en rva med rva rajvnxfxzc xl wmd vmy mfux jvmnzay dmyejmffc barwaan 1918 mny 1939. oefermdc medjdmlr vmy enjdamuay en ueha, uqaay, mny dmnza, mny lxd xqadmrexnu mr uam, medjdmlr jmddeadu wada yatafxqay rvmr wada jmqmbfa xl mjjxoqmncenz rva lmuraur uidlmja uvequ. moxnz rva naw rcqau xl qfmnau yatafxqay wmu rva yeta bxobad, m qfmna yaueznay lxd mjjidmra fxw-mfreriya bxobenz xl anaoc urdxnz qxenru mu qmdr xl rva rmns-qfmna-enlmnrdc jxobenmrexn. lmur fxw-wenz oxnxqfmna lezvradu wada yatafxqay en mff jxinrdeau; rvaua medjdmlr wada auuanremffc lfcenz qfmrlxdou lxd aezvr rx 12 omjvena zinu enurmffay en rva wenzu. fezvr mny oayeio bxobadu wada mfux yatafxqay rvmr jxify ba iuay lxd rva urdmrazej bxobmdyoanr xl jereau mny oefermdc urdxnzqxenru. rva rvdamr xl bxobad mrrmjsu xn bxrv oefermdc mny jetefemn rmdzaru fay yedajrfc rx rva yatafxqoanr xl dmymd en anzfmny. dmymd omya er qxuuebfa rx yaradoena rva fxjmrexn, rva yeurmnja, mny rva vaezvr mny uqaay xl m yeurmnr medjdmlr nx omrrad wvmr rva wamrvad wmu. bc yajaobad 1938 rvada wada leta dmymd urmrexnu aurmbfeuvay xn rva jxmur xl anzfmny, mny 15 myyerexnmf urmrexnu wada bazin. ux, wvan wmd jmoa en uaqraobad 1939, zdamr bdermen vmy m wmdnenz jvmen xl dmymd urmrexnu rvmr jxify raff wvan vxurefa qfmnau wada mqqdxmjvenz. el uxoaxna raffu cxi rvmr cxi'ta jxoa iq werv m nxtaf eyam xd m nxtaf enradqdarmrexn xl uxoarvenz, er'u qdxbmbfc m jxoqfeoanr: nxr atadcxna eu jmqmbfa xl xdezenmf rvensenz. bir nxr atadcrvenz naw eu raddebfc wxdrvwvefa; m nxtafrc, lxd akmoqfa, eu xlran m jira (xd omcba piur ueffc) ferrfa xbpajr rvmr cxi oezvr qir xn m yeuqfmc uvafl en cxid vxiua.</small>
+> “wvan wxdfy wmd e anyay, rva akqadeanja xl er uaaoay rx tenyejmra rva qxwad xl rva yalanueta xtad rva xllanueta. <small>er wmu weyafc bafeatay rvmr m uiqadexderc en niobadu xl mr famur rvdaa rx xna wmu dagieday lxd m uijjauulif xllanueta. yalanueta jxnjaqru inyadfmc rva jxnurdijrexn xl rva omzenxr fena barwaan ldmnja mny zadomnc mny xl eru fauuad jxinradqmdr, rva ueazldeay fena, en rva enradwmd camdu. car bc 1918 bxrv xl rva dagiedaoanru lxd rva uiqdaomjc xl rva xllanueta wada mr vmny: rmnsu mny qfmnau. rva bmrrfau xl jmobdme (1917) mny moeanu (1918) vmy qdxtay rvmr wvan rmnsu wada iuay en omuuau, werv uidqdeua, mny xn ledo mny xqan raddmen, er wmu qxuuebfa rx bdams rvdxizv mnc rdanjv ucurao. en rva med rva rajvnxfxzc xl wmd vmy mfux jvmnzay dmyejmffc barwaan 1918 mny 1939. oefermdc medjdmlr vmy enjdamuay en ueha, uqaay, mny dmnza, mny lxd xqadmrexnu mr uam, medjdmlr jmddeadu wada yatafxqay rvmr wada jmqmbfa xl mjjxoqmncenz rva lmuraur uidlmja uvequ. moxnz rva naw rcqau xl qfmnau yatafxqay wmu rva yeta bxobad, m qfmna yaueznay lxd mjjidmra fxw-mfreriya bxobenz xl anaoc urdxnz qxenru mu qmdr xl rva rmns-qfmna-enlmnrdc jxobenmrexn. lmur fxw-wenz oxnxqfmna lezvradu wada yatafxqay en mff jxinrdeau; rvaua medjdmlr wada auuanremffc lfcenz qfmrlxdou lxd aezvr rx 12 omjvena zinu enurmffay en rva wenzu. fezvr mny oayeio bxobadu wada mfux yatafxqay rvmr jxify ba iuay lxd rva urdmrazej bxobmdyoanr xl jereau mny oefermdc urdxnzqxenru. rva rvdamr xl bxobad mrrmjsu xn bxrv oefermdc mny jetefemn rmdzaru fay yedajrfc rx rva yatafxqoanr xl dmymd en anzfmny. dmymd omya er qxuuebfa rx yaradoena rva fxjmrexn, rva yeurmnja, mny rva vaezvr mny uqaay xl m yeurmnr medjdmlr nx omrrad wvmr rva wamrvad wmu. bc yajaobad 1938 rvada wada leta dmymd urmrexnu aurmbfeuvay xn rva jxmur xl anzfmny, mny 15 myyerexnmf urmrexnu wada bazin. ux, wvan wmd jmoa en uaqraobad 1939, zdamr bdermen vmy m wmdnenz jvmen xl dmymd urmrexnu rvmr jxify raff wvan vxurefa qfmnau wada mqqdxmjvenz. el uxoaxna raffu cxi rvmr cxi'ta jxoa iq werv m nxtaf eyam xd m nxtaf enradqdarmrexn xl uxoarvenz, er'u qdxbmbfc m jxoqfeoanr: nxr atadcxna eu jmqmbfa xl xdezenmf rvensenz. bir nxr atadcrvenz naw eu raddebfc wxdrvwvefa; m nxtafrc, lxd akmoqfa, eu xlran m jira (xd omcba piur ueffc) ferrfa xbpajr rvmr cxi oezvr qir xn m yeuqfmc uvafl en cxid vxiua.</small>
 
-爱丽丝觉得非常靠谱，该密文不怎么可能被破解，因为密码表总共有 ![](http://latex.codecogs.com/svg.latex?26!) 种可能，即使是计算机一一尝试并判断其是否具备可读性十分困难。
+爱丽丝觉得非常靠谱，该密文不怎么可能被破解，因为密码表总共有 26! 种可能，即使是计算机一一尝试并判断其是否具备可读性十分困难。
 
 > 穷举密钥来尝试获知明文的方法叫做**蛮力破解**或**暴力破解**。无法**蛮力破解**或**暴力破解**的密码是**计算安全**的。
 
@@ -119,6 +124,7 @@
 > 这种密码称为**移位密码**。
 
 首先，爱丽丝要解决的问题是：超出怎么办？例如 ![](https://latex.codecogs.com/svg.image?z&plus;5=30)。
+
 答案是除以 26，取余数。
 
 几乎所有加密算法都基于有限元素的运算，然而我们熟悉的整数集是无穷的。为了建立起整数集到仅含有限整数的集合的映射，我们定义：
@@ -127,13 +133,13 @@
 >
 > ![](https://latex.codecogs.com/svg.image?%5Cbg_white%20a%20%5Cequiv%20r%5C%20mod%5C%20m) 代表 a 除以 m 的余数与 r 除以 m 的余数相同。符号 ![](https://latex.codecogs.com/svg.image?%5Cequiv) 意为同余。
 > 
-> 一般取满足 ![](https://latex.codecogs.com/svg.image?%5Cequiv0%5Cle%20r%5Cle%20m-1) 的 r。这时可以将 r 看作是 a 除以 m 的余数。
+> 一般取满足 ![](https://latex.codecogs.com/svg.image?0%5Cle%20r%5Cle%20m-1) 的 r。这时可以将 r 看作是 a 除以 m 的余数。
 >
 > 模运算满足交换律和分配律。
 
 在移位时，任意给定整数 i 和 r ，我们会发现对同一字母移动 i+26r 位的效果与移动 i 位效果相等。例如，对字母 a=0 移动 1 位和 27 位，结果都等于 b。
 
-> 像 {..., -41, -25, 1, 27, 53, ...} 这样由所有模 26 同余的整数构成了模 26 的**等价类**。
+> 像 {..., -41, -25, 1, 27, 53, ...} 这样，由所有模 26 同余的整数构成了模 26 意义下的 26 个**等价类**中的 1 个。
 
 给定任意整数 a 和 r，若 ![](https://latex.codecogs.com/svg.image?%5Cbg_white%20a%20%5Cequiv%20r%5C%20mod%5C%20m)，即 a 与 r 在同一模 m 的等价类内，则易证在该式左右两边同时乘以或加上任意两个在同一等价类内的数，左右依然同余。
 
@@ -141,7 +147,9 @@
 
 > 同一等价类中，元素行为等价。
 
-这对于计算来说非常有用。例如爱丽丝想让每个字母移动 200\*200 位，但她又不想一个个数，就可以计算 200\*200 mod 26 的余数。算 40000 mod 26 不是个好主意，我们可以：![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20200*200%20%5Cequiv%20(7*26&plus;18)*(7*26&plus;18)%5Cequiv%2018*18=324=%2012*26&plus;12%5Cequiv%2012%20%5C%20mod%5C%2026)
+这对于计算来说非常有用。例如爱丽丝想让每个字母移动 200\*200 位，但她又不想一个个数，就可以计算 200\*200 mod 26 的余数。算 40000 mod 26 不是个好主意，我们可以：
+
+![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20200*200%20%5Cequiv%20(7*26&plus;18)*(7*26&plus;18)%5Cequiv%2018*18=324=%2012*26&plus;12%5Cequiv%2012%20%5C%20mod%5C%2026)
 
 这样极大简化了运算。
 
@@ -162,15 +170,17 @@
 > 整数加整数等于分数，矛盾。证毕。
 
 
-接下来证明 a 与 m 互素是其乘法逆元存在的充分条件：
+接下来证明 a 与 m 互素是其乘法逆元有且仅有一个的充分条件：
 
 > a 与 m 互素。有集合 ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20%5Cleft%5C%7B%200,1,2,...,m-1%20%5Cright%5C%7D) 和序列 ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20%5Cleft(%200*a%5C%20mod%5C%20m,1*a%5C%20mod%5C%20m,2*a%5C%20mod%5C%20m,...,(b-1)*a%5C%20mod%5C%20m%20%5Cright)) 有相同元素个数，且序列中每个元素均属于集合。
 > 
-> 如果该序列与集合等价，则必然存在序列中的一个元素等于 1，即 a 的乘法逆元存在。而只需证明序列元素互不重复，即可证明该序列可以构成集合且与该集合等价，推出 a 的乘法逆元存在。
+> 如果该序列与集合等价，则必然存在序列中的一个元素等于 1，即 a 的乘法逆元唯一存在。而只需证明序列元素互不重复，即可证明该序列可以构成集合且与该集合等价，推出 a 的乘法逆元唯一存在。
 > 
 > 任取两个元素作差得 ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20ka%5C%20mod%5C%20m,k%5Cle%20m-1)。因为 a 与 m 互素，k 亦小于 m，即 k 不可能是 m 的倍数，所以没有两个元素差为 0。证毕。
 
-终于可以继续分析密码了。
+对于逆元的求解方法，只需要知道求出逆元并不难，总是可以利用欧几里得辗转相除法求出逆元即可。
+
+——终于可以继续分析密码了！
 
 移位密码很不安全，因为密钥只有 26 种可能。我们介绍一下它的升级版：仿射密码。这是极好的练习模运算的契机。
 
@@ -209,12 +219,12 @@
 令人遗憾的是，这种密码依然并不满足计算安全或统计学安全，连社会工程的必要都没有，但它的意义在于开了个无限数集映射到有限数集的好头，让我们回顾一下：
 
 - 在密码编码学中，我们使用模运算进行整数集到有限整数集的映射。
-- 模运算中没有实数除法，只有乘以一个数的乘法逆元。在实数运算中，一个数的乘法逆元被称为它的倒数。它们的共同点在于可使得右式为一。之后会学习求解乘法逆元的方法。
-- 移位密码和仿射密码仍然是线性密码，没有随机性，亦无法破坏内部的统计学属性。
+- 模运算中没有实数除法，只有乘以一个数的乘法逆元。在实数运算中，一个数的乘法逆元被称为它的倒数。它们的共同点在于可使得右式为一。
+- 移位密码和仿射密码仍然没有随机性，亦无法破坏内部的统计学属性。
 
 ## 异或——二元切换
 
-爱丽丝又想到，由于数据能够以二进制流的形式传输（字符串可以先转 ASCII 码或其它编码再转二进制），也就是说非 0 即 1，可以随机产生一个与二进制下的明文信息等长的二进制串，并将位置相同的明文与密钥位相加并模 2，对所有位都执行此操作。
+爱丽丝又想到，由于数据能够以二进制流的形式传输（字符串可以先转 ASCII 码或其它编码再转二进制），也就是说非 0 即 1，可以**随机产生一个与二进制下的明文信息等长的二进制串，并将位置相同的明文与密钥位相加并模 2，对所有位都执行此操作**。
 
 例如，对于明文 110，爱丽丝随机写下密钥 101，则密文为 011。因为：
 
@@ -225,6 +235,8 @@
 模 2 除法的解密方法亦显而易见，就是每位都减去密钥位。不过我们只想在自然数集内运算，因此爱丽丝可以给每位都加上密钥位。
 
 加密和解密的过程总共加上了两次密钥位，可以推出 ![](https://latex.codecogs.com/svg.image?s_%7Bi%7D&plus;2k_%7Bi%7D%5Cequiv%20s_%7Bi%7D%5C%20mod%5C%202)。
+
+也就是说，它本身便是自己的“反函数”。
 
 模 2 加法等价于“异或”。
 
@@ -283,11 +295,98 @@ N 轮乘积密码就是分组密码，它交替进行 N 轮数据的扩散和混
 
 ![](https://i.stack.imgur.com/IGGiW.gif)
 
+DES 中的 `F` 函数利用异或与非线性的 `S` 盒进行了混淆和扩散：
+
+![](https://www.researchgate.net/profile/Bidyut-Jyoti-Saha/publication/309634531/figure/fig2/AS:424227682689026@1478155169598/Function-f-of-DES-5.png)
+
 解密过程和加密过程非常类似，而且只需要将加密密钥顺序反转即是解密密钥。
 
 爱丽丝了解了分组密码的大致原理，她并不想了解一些具体实现，因此回顾一下序列密码与分组密码吧：
 
 - 异或操作和随机数在现代密码学中有非常重要的运用。
-- 序列密码用一位密钥加密一位明文，分组密码用同一密钥加密不同分组。
+- 序列密码用一位密钥加密一位明文，分组密码分别用一串密钥加密一个分组。
 - 在高度机密场合，使用真随机数，甚至可以“一次一密”（例如冷战期间的各国政府通信）。其它情况下，可根据场景不同选择是否使用密码学安全的随机数生成器。
 - 序列密码一般比分组密码所需资源少。
+
+## 大素数
+
+以上的密码都没能为爱丽丝解决一个很要命的问题：如果她通过不安全信道向鲍勃传送密钥，则 QQ 必然可以看到密钥并用它解密信息。
+
+为了解决这个问题，天才般的爱丽丝想到可以**分别利用无法相互推导的两个密钥分别进行加密和解密**。
+
+> 利用无法相互推导的两个密钥分别进行加密和解密的算法叫**公钥算法**或**非对称算法**。
+
+> 公开的密钥称为**公钥**，仅自己知道的密钥称为**私钥**。
+
+爱丽丝让鲍勃将鲍勃自己的公钥在发信前通过 QQ 传输给爱丽丝，然后爱丽丝使用该公钥对自己要发送的信息进行加密，并将加密信息通过 QQ 传送给鲍勃。鲍勃用自己的私钥解密用自己的公钥加密而成的密文，计算出明文。
+
+在此过程中，QQ 仅能知道鲍勃的公钥和密文，而公钥无法解密自己加密的信息。因此 QQ 无法知道明文！
+
+接着，爱丽丝开始思考如何实现一个公钥算法。她又想到了数论中的一个重要事实：**将两个大素数相乘很容易，从它们巨大的积中重新分解出两个原来的素因子很难**。
+
+> **公钥算法**主要有两种，一种是利用分解大素数的困难性的**RSA 算法**，它仍然是目前世界上最通用的公钥算法；还有一种则基于离散对数。我们主要介绍爱丽丝想实现的的 RSA 算法。
+
+RSA 算法中，我们需要在给定一个正整数的情况下，计算出小于这个数且与之互素的正整数个数。
+
+> 把给定一个正整数，计算小于这个数且与之互素的正整数个数的函数叫做**欧拉函数**，记作 `φ` 函数。
+
+例如 φ(3)=2，因为共有 1、2 两个数与 3 互质。
+
+爱丽丝尝试推导欧拉函数的公式。她首先尝试推导比 ![](https://latex.codecogs.com/svg.image?p%5E%7Bk%7D) 小且与它不互素的数的个数。
+
+> 显然，比 ![](https://latex.codecogs.com/svg.image?p%5E%7Bk%7D) 小且与它不互素等价于含有因数 ![](https://latex.codecogs.com/svg.image?p)。
+>
+> 比它小且只含有因数 ![](https://latex.codecogs.com/svg.image?p) 的数构成 ![](https://latex.codecogs.com/svg.image?(1p,2p,%20...,(p-1)p)) ，有 p 个。
+> 
+> 比它小且只含有因数 ![](https://latex.codecogs.com/svg.image?p%5E%7B2%7D) 的数构成 ![](https://latex.codecogs.com/svg.image?(1p%5E2,2p%5E2,%20...,(p-1)p%5E2)) ，也有 p 个。
+>
+> ……
+> 
+> 因此共有 (k-1) 个 p 满足比它小而不互素的条件。可以推出：
+> 
+> ![](https://latex.codecogs.com/svg.image?%5Cvarphi(p%5Ek)=p%5Ek-p%5E%7B(k-1)%7D=p%5Ek(1-%5Cfrac%7B1%7D%7Bp%7D))
+
+求完了。
+
+接着，爱丽丝试图证明：![](https://latex.codecogs.com/svg.image?%5Cvarphi(mn)=%5Cvarphi(m)%5Cvarphi(n))。
+
+大致思路：
+
+> 构建两个集合：第一个集合中的正整数 ![](https://latex.codecogs.com/svg.image?a_%7Bi%7D) 小于 mn 且与 mn 互素，第二个集合中的二元组 ![](https://latex.codecogs.com/svg.image?(b_%7Bi%7D,c_%7Bi%7D)) 满足 ![](https://latex.codecogs.com/svg.image?b_%7Bi%7D) 小于 m 且与 m 互素、![](https://latex.codecogs.com/svg.image?c_%7Bi%7D) 小于 n 且与 n 互素。
+> 
+> 可推出 a 与 m 和 n 都互素。替换为等价类中的其它数后可产生二元组 (a mod m, a mod n)，该二元组属于第二个集合。易证这样的对应关系 A 到 B 满足单射，通过中国剩余定理又可证 A 到 B 满足满射。
+> 
+> 因此两个集合的元素个数相同。
+
+最终，爱丽丝推出了欧拉函数的公式：
+
+> 假设 n 可素因数分解为 ![](https://latex.codecogs.com/svg.image?p%5E%7Bk_1%7D_1p%5E%7Bk_2%7D_2...p%5E%7Bk_r%7D_r)，则：
+> 
+> ![](https://latex.codecogs.com/svg.image?%5Cvarphi(n)=%5Cvarphi(%5Cprod_%7Bi=1%7D%5E%7Br%7Dp%5E%7Bk_i%7D_i)=%5Cprod_%7Bi=1%7D%5E%7Br%7Dp%5E%7Bk_i%7D_i(1-%5Cfrac%7B1%7D%7Bp_i%7D)=n%5Cprod_%7Bi=1%7D%5E%7Br%7D(1-%5Cfrac%7B1%7D%7Bp_i%7D))
+
+好，进入 RSA 算法！
+
+首先，生成密钥：
+
+> 1. 选择*非常大*的素数 p 和 q。
+> 2. 计算 n=pq。
+> 3. 计算 φ(n)=(p-1)(q-1)（这种形式不过是我们刚刚求出的公式进行乘法分配律，并代入 φ(p)=p-1 和 φ(q)=q-1）。
+> 4. 选择小于 φ(n) 且与 φ(n) 互质的正整数 e。
+> 5. 计算模 φ(n) 意义下 e 的逆元 d。
+> 6. 记录 (n, e) 作为公钥，(n, d) 作为私钥并销毁计算过程中产生的数据。
+
+注意，非对称算法（公钥算法）中的密钥通常需要比对称算法的密钥长得多。
+
+`d` 暴露是一件非常危险的事，知道 `d` 的任何人都可以读取密文。
+
+现在，爱丽丝要使用 RAS 算法发信息给鲍勃。
+
+> 计算公钥和私钥，收信方鲍勃给发信方爱丽丝提供自己的公钥。
+> 
+> 爱丽丝拿到鲍勃的公钥 (n, e)，用它加密明文 x 得到密文 ![](https://latex.codecogs.com/svg.image?y%5Cequiv%20x%5Ee%5C%20mod%5C%20n)。
+> 
+> 可恶的 QQ 发现了爱丽丝传输的密文 y 和公钥 (n, e)，试图计算私钥 d 来读取消息。计算 d，即计算出模 φ(n) 意义下 e 的逆元，就需要计算出 φ(n)=(p-1)(q-1)。可是对大素数分解素因数及其困难，所以 QQ 几乎没有不被正义打败的可能。
+> 
+> 鲍勃接受到密文 x，用自己的私钥 (n, d) 计算出明文 ![](https://latex.codecogs.com/svg.image?x%5Cequiv%20y%5Ed%5C%20mod%5C%20n)。
+
+证明它为什么能够成立，需要把 y 代换，得到证明它为什么能够成立，即证明 ![](https://latex.codecogs.com/svg.image?x%5Cequiv%20x%5E%7Bde%7D%5C%20mod%5C%20n)。
