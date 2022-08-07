@@ -6,7 +6,7 @@
 > 
 > 尽管本文会运用许多数学原理，但**只需要完成九年义务教育水准的数学基础**即可大概读懂。
 >
-> **请关闭黑暗模式。** 不建议您独自深夜在被窝里钻研数学，更好地方法是明天早起研究。
+> **请关闭黑暗模式。** 不建议您独自深夜在被窝里钻研数学，更好的方法是明天早起研究。
 
 ## 这里不安全！
 
@@ -29,6 +29,8 @@
 （提示：这是网上随意摘录、拼接的文段，只有无聊的人才会试图阅读全文，我们只需关注第一句话即可。）
 
 > When World War I ended, the experience of it seemed to vindicate the power of the defensive over the offensive. <small>It was widely believed that a superiority in numbers of at least three to one was required for a successful offensive. Defensive concepts underlay the construction of the Maginot Line between France and Germany and of its lesser counterpart, the Siegfried Line, in the interwar years. Yet by 1918 both of the requirements for the supremacy of the offensive were at hand: tanks and planes. The battles of Cambrai (1917) and Amiens (1918) had proved that when tanks were used in masses, with surprise, and on firm and open terrain, it was possible to break through any trench system. In the air the technology of war had also changed radically between 1918 and 1939. Military aircraft had increased in size, speed, and range, and for operations at sea, aircraft carriers were developed that were capable of accompanying the fastest surface ships. Among the new types of planes developed was the dive bomber, a plane designed for accurate low-altitude bombing of enemy strong points as part of the tank-plane-infantry combination. Fast low-wing monoplane fighters were developed in all countries; these aircraft were essentially flying platforms for eight to 12 machine guns installed in the wings. Light and medium bombers were also developed that could be used for the strategic bombardment of cities and military strongpoints. The threat of bomber attacks on both military and civilian targets led directly to the development of radar in England. Radar made it possible to determine the location, the distance, and the height and speed of a distant aircraft no matter what the weather was. By December 1938 there were five radar stations established on the coast of England, and 15 additional stations were begun. So, when war came in September 1939, Great Britain had a warning chain of radar stations that could tell when hostile planes were approaching. If someone tells you that you've come up with a novel idea or a novel interpretation of something, it's probably a compliment: not everyone is capable of original thinking. But not everything new is terribly worthwhile; a novelty, for example, is often a cute (or maybe just silly) little object that you might put on a display shelf in your house.</small>
+
+这就是信息接收方鲍勃需要经过一定操作后获取到的明文。
 
 > 我们将具有可读性的原文称之为**明文**。
 
@@ -154,7 +156,7 @@
 
 > 这种方式在现代密码学中称为**社会工程**。
 
-破译密码就是要找到最薄弱的一环，而非密码本身最薄弱的一环。往后运用密码编码学时，我们要尤为注意。
+破译密码就是要找到信息传递中最薄弱的一环，而非密码本身最薄弱的一环。往后运用密码编码学时，我们要尤为注意。
 
 ## 移动一点
 
@@ -314,7 +316,7 @@ bool xor (bool a, bool b) { // C++ Function
 
 - **真随机数生成器**，例如抛五十次硬币。鉴于抛硬币比较~~低级~~麻烦，可以采用记录半导体噪音或元素放射性衰变的高效方法。~~（世界上有真随机吗？）~~
 - **（不满足密码学安全的）伪随机数生成器**，由一个初始的种子进行运算得到伪随机序列。一个最常见的例子是**线性同余生成器**：![](https://latex.codecogs.com/svg.image?s_%7Bi&plus;1%7D%20%5Cequiv%20as_%7Bi%7D&plus;b%5C%20mod%5C%20m)。ANSI C 标准中采用的参数为 ![](https://latex.codecogs.com/svg.image?a=1103515245,b=12345,m=2%5E%7B31%7D)。可惜的是，尽管它具有良好的统计学属性，但在获知一定长度的随机数序列的条件下是可以计算出种子并进行预测的。ANSI C 标准的随机数生成算法和 V8 (JavaScript) 的随机数生成算法都不具有不可预知性。不过这不那么重要。
-- **密码学安全的伪随机数生成器**难以通过一定长度的随机数序列计算出后续位。在一些场景中，这是必要的。
+- **密码学安全的伪随机数生成器**使得攻击者难以通过一定长度的随机数序列计算出后续位。在一些场景中，这是必要的。
 
 我们可以根据所需安全程度的不同，利用以上任意一种随机数生成器。
 
@@ -324,7 +326,7 @@ bool xor (bool a, bool b) { // C++ Function
 
 有一种密码与序列密码相对：
 
-> **分组密码**每次使用相同密钥加密整个明文位分组。
+> **分组密码**每次分别使用一串密钥加密整个明文位分组。
 
 分组密码的实现有 DES、3DES 等等。按组来加密，可以混淆密钥和密文的关系，同时可以通过将一个明文符号的影响扩散到多个密文符号来隐藏其统计属性。
 
@@ -357,7 +359,7 @@ DES 中的 `F` 函数利用异或与非线性的 `S` 盒进行了混淆和扩散
 
 > 公开的密钥称为**公钥**，仅自己知道的密钥称为**私钥**。
 
-爱丽丝让鲍勃将鲍勃自己的公钥在发信前通过 QQ 传输给爱丽丝，然后爱丽丝**使用该公钥加密**对自己要发送的信息，并将加密信息通过 QQ 传送给鲍勃。鲍勃**用自己的私钥解密**用自己的公钥加密而成的密文，计算出明文。
+爱丽丝让鲍勃将鲍勃自己的公钥在发信前通过 QQ 传输给爱丽丝，然后爱丽丝**使用对方公钥加密**对自己要发送的信息，并将加密信息通过 QQ 传送给鲍勃。鲍勃**用自己的私钥解密**用自己的公钥加密而成的密文，计算出明文。
 
 在此过程中，QQ 仅能知道鲍勃的公钥和密文，而公钥无法解密自己加密的信息。因此 QQ 无法知道明文！
 
@@ -367,7 +369,7 @@ DES 中的 `F` 函数利用异或与非线性的 `S` 盒进行了混淆和扩散
 
 RSA 算法中，我们需要在给定一个正整数的情况下，计算出小于这个数且与之互素的正整数个数。
 
-> 把给定一个正整数，计算小于这个数且与之互素的正整数个数的函数叫做**欧拉函数**，记作 `φ` 函数。
+> 把给定一个正整数，计算小于这个数且与之互素的正整数个数的函数叫做**欧拉函数**，记作 `φ`。
 
 例如 φ(3)=2，因为共有 1、2 两个数与 3 互素。
 
@@ -416,7 +418,7 @@ RSA 算法中，我们需要在给定一个正整数的情况下，计算出小�
 
 `d` 暴露是一件非常危险的事，知道 `d` 的任何人只要联立公开的 `n` 就都可以读取密文。
 
-现在，爱丽丝要使用 RAS 算法发信息给鲍勃。
+现在，爱丽丝要实践 RSA 算法，发信息给鲍勃。
 
 > 计算公钥和私钥，收信方鲍勃给发信方爱丽丝提供自己的公钥。
 > 
