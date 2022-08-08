@@ -12,7 +12,7 @@
 
 ## 这里不安全！
 
-> 了解一门崭新的学问，**最重要的就是耐心**。**里面的数学原理都很简明**，即使读一次不明白，多读几遍、查查维基就明白了。基本的密码学原理**并不难**，却**能够使得人在使用工具或者单纯上网的时候有一种掌控感**，知道自己正被保护着和如何进一步保护自己。
+> 了解一门崭新的学问，**最重要的就是耐心**。**里面的数学原理都很简明**，即使读一次不明白，慢慢读、查查维基就明白了。基本的密码学原理**并不难**，却**能够使得人在使用工具或者单纯上网的时候有一种掌控感**，知道自己正被保护着和如何进一步保护自己。
 
 现在，爱丽丝很想在 QQ 上给鲍勃分享自己的敏感见解。
  
@@ -44,13 +44,13 @@
 
 > 像密码表这样，可以用于完成加密、解密或其它密码学操作的信息叫做**密钥**（yuè）。
 > 
-> 像替换加密这样，使用同一进行密钥加密和解密的加密方法叫做**对称加密**。
+> 像替换加密这样，使用同一密钥进行加密和解密的加密方法叫做**对称加密**。
 
 爱丽丝非常自信地在交给鲍勃密码表后发送了如下密文：
 
 > “wvan wxdfy wmd e anyay, rva akqadeanja xl er uaaoay rx tenyejmra rva qxwad xl rva yalanueta xtad rva xllanueta. <small>er wmu weyafc bafeatay rvmr m uiqadexderc en niobadu xl mr famur rvdaa rx xna wmu dagieday lxd m uijjauulif xllanueta. yalanueta jxnjaqru inyadfmc rva jxnurdijrexn xl rva omzenxr fena barwaan ldmnja mny zadomnc mny xl eru fauuad jxinradqmdr, rva ueazldeay fena, en rva enradwmd camdu. car bc 1918 bxrv xl rva dagiedaoanru lxd rva uiqdaomjc xl rva xllanueta wada mr vmny: rmnsu mny qfmnau. rva bmrrfau xl jmobdme (1917) mny moeanu (1918) vmy qdxtay rvmr wvan rmnsu wada iuay en omuuau, werv uidqdeua, mny xn ledo mny xqan raddmen, er wmu qxuuebfa rx bdams rvdxizv mnc rdanjv ucurao. en rva med rva rajvnxfxzc xl wmd vmy mfux jvmnzay dmyejmffc barwaan 1918 mny 1939. oefermdc medjdmlr vmy enjdamuay en ueha, uqaay, mny dmnza, mny lxd xqadmrexnu mr uam, medjdmlr jmddeadu wada yatafxqay rvmr wada jmqmbfa xl mjjxoqmncenz rva lmuraur uidlmja uvequ. moxnz rva naw rcqau xl qfmnau yatafxqay wmu rva yeta bxobad, m qfmna yaueznay lxd mjjidmra fxw-mfreriya bxobenz xl anaoc urdxnz qxenru mu qmdr xl rva rmns-qfmna-enlmnrdc jxobenmrexn. lmur fxw-wenz oxnxqfmna lezvradu wada yatafxqay en mff jxinrdeau; rvaua medjdmlr wada auuanremffc lfcenz qfmrlxdou lxd aezvr rx 12 omjvena zinu enurmffay en rva wenzu. fezvr mny oayeio bxobadu wada mfux yatafxqay rvmr jxify ba iuay lxd rva urdmrazej bxobmdyoanr xl jereau mny oefermdc urdxnzqxenru. rva rvdamr xl bxobad mrrmjsu xn bxrv oefermdc mny jetefemn rmdzaru fay yedajrfc rx rva yatafxqoanr xl dmymd en anzfmny. dmymd omya er qxuuebfa rx yaradoena rva fxjmrexn, rva yeurmnja, mny rva vaezvr mny uqaay xl m yeurmnr medjdmlr nx omrrad wvmr rva wamrvad wmu. bc yajaobad 1938 rvada wada leta dmymd urmrexnu aurmbfeuvay xn rva jxmur xl anzfmny, mny 15 myyerexnmf urmrexnu wada bazin. ux, wvan wmd jmoa en uaqraobad 1939, zdamr bdermen vmy m wmdnenz jvmen xl dmymd urmrexnu rvmr jxify raff wvan vxurefa qfmnau wada mqqdxmjvenz. el uxoaxna raffu cxi rvmr cxi'ta jxoa iq werv m nxtaf eyam xd m nxtaf enradqdarmrexn xl uxoarvenz, er'u qdxbmbfc m jxoqfeoanr: nxr atadcxna eu jmqmbfa xl xdezenmf rvensenz. bir nxr atadcrvenz naw eu raddebfc wxdrvwvefa; m nxtafrc, lxd akmoqfa, eu xlran m jira (xd omcba piur ueffc) ferrfa xbpajr rvmr cxi oezvr qir xn m yeuqfmc uvafl en cxid vxiua.</small>
 
-爱丽丝觉得非常靠谱，该密文不怎么可能被破解，因为密码表总共有 26! 种可能，即使是计算机一一尝试并判断其是否具备可读性十分困难。
+爱丽丝觉得非常靠谱，该密文不怎么可能被破解，因为密码表总共有 ![](https://latex.codecogs.com/svg.image?26!%5Capprox2%5E%7B88%7D) 种可能，即使是计算机一一尝试并判断其是否具备可读性都需要几十年。
 
 > 穷举密钥来尝试获知明文的方法叫做**蛮力破解**或**暴力破解**。无法**蛮力破解**或**暴力破解**的密码是**计算安全**的。
 
@@ -597,7 +597,7 @@ RSA 算法中，我们需要在给定一个正整数的情况下，计算出小�
 
 Proton Mail 是一家“注重隐私”的邮件服务提供商。她曾经对密码毫不在意，想着反正可以用邮箱重置密码。但是没想到 Proton Mail 竟然不支持重置密码。她的邮件不幸地丢失了（不过爱丽丝自注册起只收到了三封 Proton Mail 的营销邮件）！为什么 Proton Mail 不支持重置密码呢？
 
-因为 Proton Mail 采用爱丽丝的密码作为密钥，对邮件进行了对称加密。只有知道密码的爱丽丝（连 Proton 都不保存用户的密码）才能解开自己的邮件。如果密钥忘记了，数据就很难取出来了。除非蛮力破解，挨个尝试字符串是否在进行哈希后与密码哈希值相同。
+因为 Proton Mail 采用爱丽丝的密码作为密钥，对邮件进行了对称加密。只有知道密码的爱丽丝（连 Proton 都不保存用户的密码）才能解开自己的邮件。如果密钥忘记了，数据就很难取出来了。除非蛮力破解——挨个尝试字符串，计算其哈希值是否与密码哈希值相同。
 
 爱丽丝如果要使用 Proton Mail 与使用 QQ 邮箱的~~左翼~~佐伊（Zoe）发送长邮件，则最安全最完整的做法是：
 
@@ -613,4 +613,4 @@ Proton Mail 是一家“注重隐私”的邮件服务提供商。她曾经对�
 
 > Fubswrjudskb lv jrrg. Zh qhhg wr kdyh sdwlhqfh, dqg wdnh uhvsrqvlelolwb. Wkh zruog lv jrrg. Zh qhhg wr kdyh sdwlhqfh, dqg wdnh uhvsrqvlelolwb. Sohdvh, xvh jrrg fubswrjudskb, gr vrphwklqj jrrg, dqg qrwklqj zurqj...
 
-——她最诚挚的愿望……
+——寄托了她最诚挚愿望的密码……
