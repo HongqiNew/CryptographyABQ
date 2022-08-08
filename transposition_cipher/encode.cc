@@ -5,20 +5,27 @@ using namespace std;
 
 int main()
 {
-    string plaintext = "";
+    string plaintext;
+    getline(cin, plaintext);
     size_t key;
-    cin >> plaintext >> key;
+    cin >> key;
 
     for (size_t i = 0; i < plaintext.length(); i++)
     {
-        if ((plaintext[i] >= 'a' && plaintext[i] <= 'z') || (plaintext[i] >= 'A' && plaintext[i] <= 'Z'))
+        char currentChar = plaintext[i];
+        if (plaintext[i] >= 'a' && plaintext[i] <= 'z')
         {
-            cout << char(plaintext[i] + 3);
+            currentChar -= 'a';
+            currentChar = (currentChar + key) % 26;
+            currentChar += 'a';
         }
-        else
+        else if (plaintext[i] >= 'A' && plaintext[i] <= 'Z')
         {
-            cout << plaintext[i];
+            currentChar -= 'A';
+            currentChar = (currentChar + key) % 26;
+            currentChar += 'A';
         }
+        cout << currentChar;
     }
 
     return 0;
