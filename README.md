@@ -263,9 +263,9 @@
 
 因此爱丽丝还需要给密钥对加上一个条件：a 与 26 互素。
 
-现在就没有问题了！用密钥对 (3, 1) 试一下明文 c=3 吧！
+现在就没有问题了！用密钥对 (3, 1) 试一下明文 c=2 吧！
 
-![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20y=3*3&plus;1=10%5C%5C3%5E%7B-1%7D=9%5C%5Cx%5Cequiv%209*(10-1)=81%5C%20mod%5C%2026%5C%5Cx=3=c)
+![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20y=3*2&plus;1=7%5C%5C3%5E%7B-1%7D=9%5C%20mod%5C%2026%5C%5Cx%5Cequiv%209*(7-1)=54%5C%20mod%5C%2026%5C%5Cx=2=c)
 
 这时，仿射密码是替换密码的另一个特例。
 
