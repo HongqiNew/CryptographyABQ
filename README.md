@@ -387,15 +387,9 @@ RSA 算法中，爱丽丝需要在给定一个正整数的情况下，计算出�
 
 爱丽丝尝试推导欧拉函数的公式。她首先尝试推导比 ![](https://latex.codecogs.com/svg.image?p%5E%7Bk%7D) 小且与它***不***互素的数的个数。
 
-> 显然，比 ![](https://latex.codecogs.com/svg.image?p%5E%7Bk%7D) 小且与它不互素等价于含有因数 ![](https://latex.codecogs.com/svg.image?p)。
->
-> 比它小且只含有因数 ![](https://latex.codecogs.com/svg.image?p) 的数构成 ![](https://latex.codecogs.com/svg.image?(1p,2p,%20...,(p-1)p)) ，有 p 个。
+> 显然，比 ![](https://latex.codecogs.com/svg.image?p%5E%7Bk%7D) 小且与它不互素等价于含有因数 p，含有因数 p 的数构成了一个公差为 p 的等差数列 ![](https://latex.codecogs.com/svg.image?(1p,2p,...,pp,(p&plus;1)p,(p&plus;2)p,...,p%5E%7Bk-2%7Dp,(p%5E%7Bk-2%7D&plus;1)p,(p%5E%7Bk-2%7D&plus;2)p,...,(p%5E%7Bk-1%7D-1)p))
 > 
-> 比它小且只含有因数 ![](https://latex.codecogs.com/svg.image?p%5E%7B2%7D) 的数构成 ![](https://latex.codecogs.com/svg.image?(1p%5E2,2p%5E2,%20...,(p-1)p%5E2)) ，也有 p 个。
->
-> ……
-> 
-> 因此共有 (k-1)p 个数满足比它小而不互素的条件。可以推出：
+> 因此共有 ![](https://latex.codecogs.com/svg.image?p%5E%7Bk-1%7D-1) 个数满足比它小而不互素的条件。又因为共有 ![](https://latex.codecogs.com/svg.image?p%5E%7Bk%7D-1) 个正整数小于它，可以推出：
 > 
 > ![](https://latex.codecogs.com/svg.image?%5Cvarphi(p%5Ek)=p%5Ek-p%5E%7Bk-1%7D=p%5Ek(1-%5Cfrac%7B1%7D%7Bp%7D))
 
