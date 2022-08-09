@@ -4,7 +4,7 @@
 > 
 > 为了防止您疲劳或中途按捺不住键政的欲望，本文不得不十分有趣并**浅尝辄止**，因此无需担心。
 > 
-> 尽管本文会运用许多数学原理，但**只需要完成九年义务教育水准的数学基础**即可大概读懂。
+> 尽管本文会运用许多数学原理，但**只需要完成九年义务教育水准的数学基础**即可大概读懂。***证明看不懂可以不看，直接看结论！***
 > 
 > **请关闭黑暗模式。** 不建议您独自深夜在被窝里钻研数学，更好的方法是明天早起研究。
 
@@ -176,7 +176,7 @@
 
 答案是除以 26，取余数。
 
-几乎所有加密算法都基于有限元素的运算，然而爱丽丝熟悉的整数集是无穷的。为了建立起整数集到仅含有限整数的集合的映射，定义：
+几乎所有加密算法都基于有限元素的运算，然而爱丽丝熟悉的整数集是无穷的。为了建立起整数集到仅含有限整数的集合的映射，定义模运算：
 
 >当 ![](https://latex.codecogs.com/svg.image?a,r,m%5Cin%5Cmathbb%7BZ%7D,m%3E0)，
 >
@@ -190,9 +190,9 @@
 
 > 像 {..., -41, -25, 1, 27, 53, ...} 这样，由所有模 26 同余的整数构成了模 26 意义下的 26 个**等价类**中的 1 个。
 
-给定任意整数 a 和 r，若 ![](https://latex.codecogs.com/svg.image?%5Cbg_white%20a%20%5Cequiv%20r%5C%20mod%5C%20m)，即 a 与 r 在同一模 m 的等价类内，则易证在该式左右两边同时乘以或加上任意两个在同一等价类内的数，左右依然同余。
+给定任意整数 a 和 r，若 ![](https://latex.codecogs.com/svg.image?%5Cbg_white%20a%20%5Cequiv%20r%5C%20mod%5C%20m)，即 a 与 r 在模 m 的同一等价类内，则易证在该式左右两边同时乘以或加上任意两个在同一等价类内的数，左右依然同余。
 
-例如 ![](https://latex.codecogs.com/svg.image?%5Cbg_white%201%20%5Cequiv%209%5C%20mod%5C%208)，左边加上 18，右边加上 82，![](https://latex.codecogs.com/svg.image?%5Cbg_white%2019%20%5Cequiv%2090%5C%20mod%5C%208) 依然成立。
+例如 ![](https://latex.codecogs.com/svg.image?%5Cbg_white%201%20%5Cequiv%209%5C%20mod%5C%208)，左边加上 18，右边加上 82，![](https://latex.codecogs.com/svg.image?%5Cbg_white%2019%20%5Cequiv%2091%5C%20mod%5C%208) 依然成立。
 
 > 同一等价类中，元素行为等价。
 
@@ -206,7 +206,7 @@
 
 > ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a) 的乘法逆元 ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a^{-1}) 是满足 ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a*a%5E%7B-1%7D=1%5C%20mod%5C%20m) 的整数。
 
-接下来证明在整数集（有的情况下称为“整数环”） ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a) 的 乘法逆元 ![](https://latex.codecogs.com/svg.image?a%5E%7B-1%7D) 存在与 ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a) 和 ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20m) 互素等价。
+接下来证明在整数集（有的情况下称为“整数环”） ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a) 的乘法逆元 ![](https://latex.codecogs.com/svg.image?a%5E%7B-1%7D) 存在与 ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20a) 和 ![](https://latex.codecogs.com/svg.image?%5Cdpi%7B110%7D%20%5Cbg_white%20m) 互素等价。
 
 首先证明 a 和 m 互素是其乘法逆元存在的必要条件：
 
